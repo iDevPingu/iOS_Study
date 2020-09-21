@@ -131,7 +131,7 @@ class HomeHeaderView: UICollectionReusableView{
         self.descriptionLabel.numberOfLines = 2
         self.descriptionLabel.widthAnchor.constraint(equalToConstant: self.frame.width - 100).isActive = true
         self.descriptionLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        self.descriptionLabel.textColor = .systemPink
+        self.descriptionLabel.textColor = .none
     }
     
 

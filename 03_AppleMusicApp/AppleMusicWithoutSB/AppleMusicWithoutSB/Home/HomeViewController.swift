@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
         self.collectionView.translatesAutoresizingMaskIntoConstraints = false
         self.collectionView.register(HomeViewCell.self, forCellWithReuseIdentifier: reusecellIdentifier)
         self.collectionView.register(HomeHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseHeaderIdentifier)
-        self.collectionView.backgroundColor = .white
+        self.collectionView.backgroundColor = .none
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
 
@@ -56,7 +56,13 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nextViewController: PlayerViewController = PlayerViewController()
+        let item = self.trackManager.tracks[indexPath.item]
+        nextViewController.myPlayer.replaceCurrentItem(with: item)
+        print(nextViewController.myPlayer.totalDurationTime)
+        self.present(nextViewController, animated: true, completion: nil)
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource{
@@ -86,7 +92,7 @@ extension HomeViewController: UICollectionViewDataSource{
             header.tapHandler = { item -> Void in
                 // 플레이어를 띄운다
                 let nextView = PlayerViewController()
-                
+                nextView.myPlayer.replaceCurrentItem(with: item)
                 self.present(nextView, animated: true, completion: nil)
             }
             return header

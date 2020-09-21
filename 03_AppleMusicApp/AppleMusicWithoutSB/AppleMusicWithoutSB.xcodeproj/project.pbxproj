@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		602B33482518A3ED002BA7A8 /* DefaultStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602B33472518A3ED002BA7A8 /* DefaultStyle.swift */; };
 		604D0BBA25138EB3000C7640 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604D0BB925138EB3000C7640 /* HomeViewCell.swift */; };
 		60722C6F25135EC6003B5D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60722C6E25135EC6003B5D53 /* AppDelegate.swift */; };
 		60722C7125135EC6003B5D53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60722C7025135EC6003B5D53 /* SceneDelegate.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		602B33472518A3ED002BA7A8 /* DefaultStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStyle.swift; sourceTree = "<group>"; };
 		604D0BB925138EB3000C7640 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		60722C6B25135EC6003B5D53 /* AppleMusicWithoutSB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusicWithoutSB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60722C6E25135EC6003B5D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,11 +120,12 @@
 			children = (
 				60C33E502514ADB5003A51BC /* PlayerView */,
 				60F9268B25139EF400CBE647 /* Track */,
-				60F9265C25139B6B00CBE647 /* Resources */,
 				60722C822513637D003B5D53 /* Home */,
 				60722C6E25135EC6003B5D53 /* AppDelegate.swift */,
 				60722C7025135EC6003B5D53 /* SceneDelegate.swift */,
+				602B33472518A3ED002BA7A8 /* DefaultStyle.swift */,
 				60722C7725135EC7003B5D53 /* Assets.xcassets */,
+				60F9265C25139B6B00CBE647 /* Resources */,
 				60722C7925135EC7003B5D53 /* LaunchScreen.storyboard */,
 				60F9265A251395B300CBE647 /* Aatrox.png */,
 				60722C7C25135EC7003B5D53 /* Info.plist */,
@@ -289,6 +292,7 @@
 				60C33E542514C224003A51BC /* MyPlayer.swift in Sources */,
 				60722C6F25135EC6003B5D53 /* AppDelegate.swift in Sources */,
 				60722C7125135EC6003B5D53 /* SceneDelegate.swift in Sources */,
+				602B33482518A3ED002BA7A8 /* DefaultStyle.swift in Sources */,
 				60F926912513A65300CBE647 /* ExtensionAVPlayerItem.swift in Sources */,
 				60F9268F2513A11000CBE647 /* Album.swift in Sources */,
 				60F9268D2513A0C100CBE647 /* Track.swift in Sources */,
