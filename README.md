@@ -1,6 +1,6 @@
 # Ick's Developer Portfolio
 ## 블로그 : https://icksw.tistory.com
-aa
+
 # ChatBot
 > # 여행 친구를 찾아주는 챗봇 '여우'
  - https://github.com/saitros/Team-Lost-Star
@@ -25,7 +25,7 @@ aa
  - AppleMusicWithoutSB
    - AVFoundation 사용해보기
    - CollectionView HeaderView 추가해보기
-   - GestureRecognizer 적용해보기
+   - CollectionView CustomCell 사용해보기
 
 > # ToyProject
  - IckGG
