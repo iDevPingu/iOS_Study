@@ -1,13 +1,23 @@
-# Ick's Developer Portfolio
+# Ick's Developer Diary
 ## 블로그 : https://icksw.tistory.com
 
-# ChatBot
-> # 여행 친구를 찾아주는 챗봇 '여우'
- - https://github.com/saitros/Team-Lost-Star
-  - KakaoTalk에서 사용가능한 챗봇 구현
-  - Python3 사용
+# Swift
 
 # iOS
+> ## UIFont
+> ## UITableView
+ - [스토리보드 없이 TableView 만들기](https://icksw.tistory.com/96)
+ 
+> ## UICollectionView
+ - [스토리보드 없이 CollectionView 만들기](https://icksw.tistory.com/45?category=877391)
+ 
+> ## GCD
+ - DispatchQueue
+   - [DispatchQueue로 동시성 구현해보기](https://icksw.tistory.com/99)
+ - OperatingQueue
+
+
+# iOS Project
 ## WithoutSB라는 이름이 붙은 프로젝트는 스토리보드 없이 코드로만 작성했습니다.
 > # TableViewStudy
  - TableViewWithoutSB
@@ -34,4 +44,10 @@
  - OurSecretSpace
    - Firebase 기반 연인간 채팅, 위치공유 앱
    - 개발중
+
+# ChatBot
+> # 여행 친구를 찾아주는 챗봇 '여우'
+ - https://github.com/saitros/Team-Lost-Star
+  - KakaoTalk에서 사용가능한 챗봇 구현
+  - Python3 사용
 
