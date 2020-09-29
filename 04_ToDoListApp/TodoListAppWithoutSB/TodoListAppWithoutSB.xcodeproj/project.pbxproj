@@ -14,6 +14,7 @@
 		6037AE21251E3757006FD4FB /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6037AE20251E3757006FD4FB /* SettingViewController.swift */; };
 		6037AE24251E3BB9006FD4FB /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6037AE23251E3BB9006FD4FB /* TodoListViewController.swift */; };
 		6037AE26251E3BCC006FD4FB /* TodoListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6037AE25251E3BCC006FD4FB /* TodoListViewCell.swift */; };
+		60B1B45625233E030084D5C4 /* TodoListViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B1B45525233E030084D5C4 /* TodoListViewHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6037AE20251E3757006FD4FB /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		6037AE23251E3BB9006FD4FB /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		6037AE25251E3BCC006FD4FB /* TodoListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewCell.swift; sourceTree = "<group>"; };
+		60B1B45525233E030084D5C4 /* TodoListViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				6037AE23251E3BB9006FD4FB /* TodoListViewController.swift */,
+				60B1B45525233E030084D5C4 /* TodoListViewHeaderView.swift */,
 				6037AE25251E3BCC006FD4FB /* TodoListViewCell.swift */,
 			);
 			path = TodoListView;
@@ -159,6 +162,7 @@
 				6037AE26251E3BCC006FD4FB /* TodoListViewCell.swift in Sources */,
 				6037AE21251E3757006FD4FB /* SettingViewController.swift in Sources */,
 				6037AE04251E2A8D006FD4FB /* AppDelegate.swift in Sources */,
+				60B1B45625233E030084D5C4 /* TodoListViewHeaderView.swift in Sources */,
 				6037AE06251E2A8D006FD4FB /* SceneDelegate.swift in Sources */,
 				6037AE1D251E32AA006FD4FB /* SettingViewCell.swift in Sources */,
 			);

@@ -8,16 +8,35 @@
 
 import UIKit
 
+private let reuseIdentifier = "cell"
+private let reuseHeaderIdentifier = "header"
 class TodoListViewController: UIViewController {
 
     var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = .none
+        self.collectionViewSetting()
         // Do any additional setup after loading the view.
     }
     
+    func collectionViewSetting(){
+        self.collectionView = UICollectionView(frame: CGRect(), collectionViewLayout: UICollectionViewFlowLayout())
+        self.view.addSubview(self.collectionView)
+        self.collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.collectionView.register(TodoListViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView.register(TodoListViewHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseHeaderIdentifier)
+        
+        self.collectionView.backgroundColor = .white
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        self.collectionView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        self.collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        self.collectionView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        self.collectionView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+    }
 
     /*
     // MARK: - Navigation
@@ -33,18 +52,37 @@ class TodoListViewController: UIViewController {
 
 extension TodoListViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell: TodoListViewCell = self.collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? TodoListViewCell else { return UICollectionViewCell() }
+        
+        
+        return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind{
+        case UICollectionView.elementKindSectionHeader:
+            guard let header = self.collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: reuseHeaderIdentifier, for: indexPath) as? TodoListViewHeaderView else { return UICollectionReusableView() }
+            header.dateLabel.text = "Today"
+            return header
+        default:
+            return UICollectionReusableView()
+        }
+    }
     
 }
 
 extension TodoListViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = self.collectionView.bounds.width
+        let height: CGFloat = 50
+        return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let width = self.collectionView.bounds.width
         let height: CGFloat = 50
         return CGSize(width: width, height: height)
