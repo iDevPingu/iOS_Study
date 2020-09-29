@@ -15,7 +15,7 @@
  - DispatchQueue
    - [DispatchQueue로 동시성 구현해보기](https://icksw.tistory.com/99)
  - OperatingQueue
-
+   - [OperatingQueue로 동시성 구현해보기](https://icksw.tistory.com/105)
 
 # iOS Project
 ## WithoutSB라는 이름이 붙은 프로젝트는 스토리보드 없이 코드로만 작성했습니다.
