@@ -44,12 +44,15 @@
    - CollectionView CustomCell 사용해보기
 
 > # ToyProject
- - IckGG
-   - RiotApi 활용한 롤 전적검색 서비스
-   - 개발중
- - OurSecretSpace
-   - Firebase 기반 연인간 채팅, 위치공유 앱
-   - 개발중
+ - LvUpTodo
+   - TodoList에 Game을 결합한 앱
+   - 자신을 하나의 캐릭터 처럼 육성하는 계획 앱
+   
+   Screenshots
+   -----------
+  <div>
+ <img width = "1000" src="https://user-images.githubusercontent.com/43135067/97694374-cd5a1d00-1ae5-11eb-81dd-81d4bf567116.png">
+ </div>
 
 # ChatBot
 > # 여행 친구를 찾아주는 챗봇 '여우'
