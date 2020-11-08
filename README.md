@@ -62,3 +62,21 @@
   - KakaoTalk에서 사용가능한 챗봇 구현
   - Python3 사용
 
+# Algorithm
+> ## Sorting
+>> ### QuickSort
+>> ### MergeSort
+>> ### HeapSort
+>>> ### [개념](https://icksw.tistory.com/91?category=885659)
+
+> ## 최소비용신장트리 (Minimum Cost Spanning Tree)
+>> ### Kruskal
+>>> ### [개념](https://icksw.tistory.com/97?category=885659)
+
+> ## BFS, DFS
+>> ### BFS
+>> ### DFS
+
+> ## Dijkstra
+>> [개념](https://icksw.tistory.com/94?category=885659)
+
