@@ -12,6 +12,8 @@ private let reuseIdentifier = "cell"
 private let reuseHeaderIdentifier = "header"
 class TodoListViewController: UIViewController {
 
+    let todoListViewModel = TodoViewModel()
+    
     var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -19,6 +21,8 @@ class TodoListViewController: UIViewController {
         self.view.backgroundColor = .none
         self.collectionViewSetting()
         // Do any additional setup after loading the view.
+        
+        todoListViewModel.loadTasks()
     }
     
     func collectionViewSetting(){
@@ -52,13 +56,22 @@ class TodoListViewController: UIViewController {
 
 extension TodoListViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        if section == 0{
+            return todoListViewModel.todayTodos.count
+        } else {
+            return todoListViewModel.upcompingTodos.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: TodoListViewCell = self.collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? TodoListViewCell else { return UICollectionViewCell() }
-        
-        
+        var todo: Todo
+        if indexPath.section == 0 {
+            todo = todoListViewModel.todayTodos[indexPath.item]
+        } else {
+            todo = todoListViewModel.upcompingTodos[indexPath.item]
+        }
+//        cell.updateUI(todo: todo)
         return cell
     }
     
