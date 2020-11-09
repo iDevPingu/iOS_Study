@@ -1,4 +1,4 @@
-# Ick's Developer Diary
+# IckiOS
 ## 블로그 : https://icksw.tistory.com
 
 # Swift
@@ -27,6 +27,9 @@
 > ### Q : Bounds 와 Frame 의 차이점을 설명하시오.
  - A : [Bounds와 Frame의 차이점](https://icksw.tistory.com/132)
 > ### Q : 실제 디바이스가 없을 경우 개발 환경에서 할 수 있는 것과 없는 것을 설명하시오.
+> ### Q : 앱이 foreground에 있을 때와 background에 있을 때 어떤 제약사항이 있나요?
+> ### Q : 상태 변화에 따라 다른 동작을 처리하기 위한 앱델리게이트 메서드들을 설명하시오.
+> ### Q : scene delegate에 대해 설명하시오.
 # iOS Project
 ## WithoutSB라는 이름이 붙은 프로젝트는 스토리보드 없이 코드로만 작성했습니다.
 > # TableViewStudy
@@ -70,16 +73,14 @@
 > ## Sorting
 >> ### QuickSort
 >> ### MergeSort
->> ### HeapSort
->>> ### [개념](https://icksw.tistory.com/91?category=885659)
+>> ### [HeapSort](https://icksw.tistory.com/91?category=885659)
 
 > ## 최소비용신장트리 (Minimum Cost Spanning Tree)
->> ### Kruskal
->>> ### [개념](https://icksw.tistory.com/97?category=885659)
+>> ### [Kruskal](https://icksw.tistory.com/97?category=885659)
 
 > ## BFS, DFS
 >> ### BFS
 >> ### DFS
 
-> ## Dijkstra
->> [개념](https://icksw.tistory.com/94?category=885659)
+> ## [Dijkstra](https://icksw.tistory.com/94?category=885659)
+
