@@ -23,6 +23,10 @@
  - OperatingQueue
    - [OperatingQueue로 동시성 구현해보기](https://icksw.tistory.com/105)
 
+# iOS Developer Question (from : https://github.com/JeaSungLEE/iOSInterviewquestions)
+> ### Q : Bounds 와 Frame 의 차이점을 설명하시오.
+ - A : [Bounds와 Frame의 차이점](https://icksw.tistory.com/132)
+> ### Q : 실제 디바이스가 없을 경우 개발 환경에서 할 수 있는 것과 없는 것을 설명하시오.
 # iOS Project
 ## WithoutSB라는 이름이 붙은 프로젝트는 스토리보드 없이 코드로만 작성했습니다.
 > # TableViewStudy
@@ -79,4 +83,3 @@
 
 > ## Dijkstra
 >> [개념](https://icksw.tistory.com/94?category=885659)
-
