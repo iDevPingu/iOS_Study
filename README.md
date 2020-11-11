@@ -28,7 +28,9 @@
 > ### Q : Bounds 와 Frame 의 차이점을 설명하시오.
  - A : [Bounds와 Frame의 차이점](https://icksw.tistory.com/132)
 > ### Q : 실제 디바이스가 없을 경우 개발 환경에서 할 수 있는 것과 없는 것을 설명하시오.
- - A : 실제 디바이스가 없을 경우에 카메라 촬영 기능을 사용할 수 없다.
+ - A : 실제 디바이스가 없을 경우에 카메라 촬영 기능을 사용할 수 없습니다. 하지만 앨범은 작동학 때문에 PhotoKit을 사용하는것은 가능합니다. 또한 광센서, 근접 센서도 사용할 수 없습니다. 시뮬레이터에서의 성능은 실제 디바이스에서의 성능과 차이가 있을 수 있기 때문에 정확한 테스트라고 볼 수는 없습니다.
+ - [simulator 설명서](https://help.apple.com/simulator/mac/current/#/deve44b57b2a)
+ - [simulator 차이점](https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/iOS_Simulator_Guide/TestingontheiOSSimulator/TestingontheiOSSimulator.html)
 > ### Q : 앱이 foreground에 있을 때와 background에 있을 때 어떤 제약사항이 있나요?
 > ### Q : 상태 변화에 따라 다른 동작을 처리하기 위한 앱델리게이트 메서드들을 설명하시오.
 > ### Q : scene delegate에 대해 설명하시오.
