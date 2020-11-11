@@ -76,6 +76,16 @@
    - utility : 사용자가 적극적으로 추적하지 않는 작업에 대한 qos
    - background : 생성된 것의 유지 관리, 정리 작업에 대한 qos
    - unspecified : qos를 설정하지 않음
+> ## AutoLayout
+> ### Q : 오토레이아웃을 코드로 작성하는 방법은 무엇인가? (3가지)
+> ### Q : hugging, resistance에 대해서 설명하시오.
+> ### Q : Intrinsic Size에 대해서 설명하시오.
+> ### Q : 스토리보드를 이용했을때의 장단점을 설명하시오.
+> ### Q : Safearea에 대해서 설명하시오.
+> ### Q : Left Constraint 와 Leading Constraint 의 차이점을 설명하시오.
+
+> ## Swift
+> ### Q : Optional 이란 무엇인지 설명하시오.
 # iOS Project
 ## WithoutSB라는 이름이 붙은 프로젝트는 스토리보드 없이 코드로만 작성했습니다.
 > # TableViewStudy
