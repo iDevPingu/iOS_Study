@@ -1,9 +1,9 @@
 # IckiOS
 ## 블로그 : https://icksw.tistory.com
 
-# Swift
+# Swift Study
 
-# iOS
+# iOS Study
 > ## UIFont
 > ## UITableView
  - [스토리보드 없이 TableView 만들기](https://icksw.tistory.com/96)
