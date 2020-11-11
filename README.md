@@ -30,6 +30,7 @@
 > ### Q : 앱이 foreground에 있을 때와 background에 있을 때 어떤 제약사항이 있나요?
 > ### Q : 상태 변화에 따라 다른 동작을 처리하기 위한 앱델리게이트 메서드들을 설명하시오.
 > ### Q : scene delegate에 대해 설명하시오.
+ - A : [Multiple Window를 위한 Scenedelegate](https://icksw.tistory.com/137)
 # iOS Project
 ## WithoutSB라는 이름이 붙은 프로젝트는 스토리보드 없이 코드로만 작성했습니다.
 > # TableViewStudy
