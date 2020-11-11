@@ -24,13 +24,30 @@
    - [OperatingQueue로 동시성 구현해보기](https://icksw.tistory.com/105)
 
 # iOS Developer Question (from : https://github.com/JeaSungLEE/iOSInterviewquestions)
+> ## iOS
 > ### Q : Bounds 와 Frame 의 차이점을 설명하시오.
  - A : [Bounds와 Frame의 차이점](https://icksw.tistory.com/132)
 > ### Q : 실제 디바이스가 없을 경우 개발 환경에서 할 수 있는 것과 없는 것을 설명하시오.
+ - A : 실제 디바이스가 없을 경우에 카메라 촬영 기능을 사용할 수 없다.
 > ### Q : 앱이 foreground에 있을 때와 background에 있을 때 어떤 제약사항이 있나요?
 > ### Q : 상태 변화에 따라 다른 동작을 처리하기 위한 앱델리게이트 메서드들을 설명하시오.
 > ### Q : scene delegate에 대해 설명하시오.
  - A : [Multiple Window를 위한 Scenedelegate](https://icksw.tistory.com/137)
+> ### Q : 앱이 In-Active 상태가 되는 시나리오를 설명하시오.
+> ### Q : NSOperationQueue 와 GCD Queue 의 차이점을 설명하시오.
+ - A : [NSOperationQueue](https://icksw.tistory.com/35), [GCD Queue](https://icksw.tistory.com/70)
+ - 요약 : 
+> ### Q : GCD API 동작 방식과 필요성에 대해 설명하시오.
+ - A : [GCD Queue](https://icksw.tistory.com/70)
+ - 요약 : 
+> ### Q : 자신만의 Custom View를 만들려면 어떻게 해야하는지 설명하시오.
+> ### Q : iOS 앱을 만들고, User Interface를 구성하는 데 필수적인 프레임워크 이름은 무엇인가?
+ - A : UIKit
+> ### Q : Foundation Kit은 무엇이고 포함되어 있는 클래스들은 어떤 것이 있는지 설명하시오.
+> ### Q : Delegate란 무언인가 설명하고, retain 되는지 안되는지 그 이유를 함께 설명하시오.
+> ### Q : NotificationCenter 동작 방식과 활용 방안에 대해 설명하시오.
+> ### Q : UIKit 클래스들을 다룰 때 꼭 처리해야하는 애플리케이션 쓰레드 이름은 무엇인가?
+
 # iOS Project
 ## WithoutSB라는 이름이 붙은 프로젝트는 스토리보드 없이 코드로만 작성했습니다.
 > # TableViewStudy
