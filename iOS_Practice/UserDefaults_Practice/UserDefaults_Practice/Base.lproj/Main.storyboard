@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Button View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ButtonViewController" customModule="UserDefaults_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gy8-DP-tm9">
+                                <rect key="frame" x="158" y="418" width="98" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Menu"/>
+                                <connections>
+                                    <segue destination="K8i-Mt-PZr" kind="presentation" id="YW0-id-f62"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gy8-DP-tm9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H0B-ct-Era"/>
+                            <constraint firstItem="Gy8-DP-tm9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tqY-6i-Iux"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="94"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="Eg0-fY-omk">
+            <objects>
+                <viewController id="K8i-Mt-PZr" customClass="MenuViewController" customModule="UserDefaults_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V2w-TG-7yl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="속도 증가 스위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcg-p9-9Oa">
+                                <rect key="frame" x="50" y="100" width="176" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oXL-la-ZB7">
+                                <rect key="frame" x="285" y="100" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchOnOff:" destination="K8i-Mt-PZr" eventType="valueChanged" id="Aom-iE-rHk"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="재생 속도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2h-9g-DOg">
+                                <rect key="frame" x="100" y="233" width="75" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmD-Im-2PF">
+                                <rect key="frame" x="289" y="231" width="25" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfe-5W-E65">
+                                <rect key="frame" x="155" y="347" width="104" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="뒤로가기"/>
+                                <connections>
+                                    <action selector="touchUpBackButton:" destination="K8i-Mt-PZr" eventType="touchUpInside" id="dGY-ob-WuW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y4d-V9-j8c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oXL-la-ZB7" firstAttribute="top" secondItem="Y4d-V9-j8c" secondAttribute="top" constant="100" id="0bk-WP-BGQ"/>
+                            <constraint firstItem="Y4d-V9-j8c" firstAttribute="trailing" secondItem="oXL-la-ZB7" secondAttribute="trailing" constant="80" id="P5m-Qg-sCU"/>
+                            <constraint firstItem="jfe-5W-E65" firstAttribute="centerX" secondItem="V2w-TG-7yl" secondAttribute="centerX" id="VzH-Kz-FYy"/>
+                            <constraint firstItem="M2h-9g-DOg" firstAttribute="top" secondItem="xcg-p9-9Oa" secondAttribute="bottom" constant="100" id="Xxs-UC-SKa"/>
+                            <constraint firstItem="xcg-p9-9Oa" firstAttribute="leading" secondItem="Y4d-V9-j8c" secondAttribute="leading" constant="50" id="e8y-Ku-Spb"/>
+                            <constraint firstItem="AmD-Im-2PF" firstAttribute="top" secondItem="oXL-la-ZB7" secondAttribute="bottom" constant="100" id="egC-Ro-GGZ"/>
+                            <constraint firstItem="xcg-p9-9Oa" firstAttribute="top" secondItem="Y4d-V9-j8c" secondAttribute="top" constant="100" id="htS-lw-NUt"/>
+                            <constraint firstItem="M2h-9g-DOg" firstAttribute="leading" secondItem="Y4d-V9-j8c" secondAttribute="leading" constant="100" id="iBn-p7-qxF"/>
+                            <constraint firstItem="Y4d-V9-j8c" firstAttribute="trailing" secondItem="AmD-Im-2PF" secondAttribute="trailing" constant="100" id="oS0-pR-Jfj"/>
+                            <constraint firstItem="jfe-5W-E65" firstAttribute="centerY" secondItem="V2w-TG-7yl" secondAttribute="centerY" constant="-50" id="x9G-Wc-eJC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="speedLabel" destination="AmD-Im-2PF" id="ptX-Sr-4Sj"/>
+                        <outlet property="speedSwitch" destination="oXL-la-ZB7" id="F6S-4g-zis"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujK-1N-bnC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
