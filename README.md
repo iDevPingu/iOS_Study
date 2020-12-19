@@ -1,12 +1,26 @@
 # PinguiOS
 ## 블로그 : https://icksw.tistory.com
 
-# Swift Study
+# [Computer_Organization](https://github.com/jaicoco/iOS_Study/tree/master/Computer_Organization)
+ - 컴퓨터 구조 공부한 내용 정리
+ 
+# [Operating System](https://github.com/jaicoco/iOS_Study/tree/master/Operating_System)
+ - 운영체제 공부한 내용 정리
 
-# iOS Study
+# [iOS](https://github.com/jaicoco/iOS_Study/tree/master/iOS)
+ > ### [iOS_Developer_Interview](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_Developer_Interview)
+  - iOS 개발자 인터뷰 질문 정리
+ > ### [iOS_Function_Practice](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_Funtion_Practice)
+  - iOS 개발 기능들 연습 코드
+ > ### [iOS_View_Practice](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_View_Practice)
+  - iOS 기본적인 뷰 연습 코드
+  
+# [Swift](https://github.com/jaicoco/iOS_Study/tree/master/Swift)
+ - Apple Swift 공식문서를 읽고 정리한 내용
+ > ### [Swift_Practice](https://github.com/jaicoco/iOS_Study/tree/master/Swift/Swift_Practice)
+  - Swift를 연습한 코드
 
 # iOS Project
-
 > # ToyProject
  - LvUpTodo
    - TodoList에 Game을 결합한 앱
