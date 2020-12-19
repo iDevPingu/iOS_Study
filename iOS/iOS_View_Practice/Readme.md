@@ -1,19 +1,20 @@
-# iOS Study
-> ## UIFont
-> ## UITableView
- - [스토리보드 없이 TableView 만들기](https://icksw.tistory.com/96)
- 
-> ## UICollectionView
- - [스토리보드 없이 CollectionView 만들기](https://icksw.tistory.com/45?category=877391)
+# iOS View Practice
 
-> ## UINavigationView
- - [스토리보드 없이 NavigationView 만들기](https://icksw.tistory.com/48)
- 
-> ## UITabBarController
- - [스토리보드 없이 TabBarController 만들기](https://icksw.tistory.com/106)
- 
-> ## GCD
- - DispatchQueue
-   - [DispatchQueue로 동시성 구현해보기](https://icksw.tistory.com/99)
- - OperatingQueue
-   - [OperatingQueue로 동시성 구현해보기](https://icksw.tistory.com/105)
+## WithoutSB라는 이름이 붙은 프로젝트는 스토리보드 없이 코드로만 작성했습니다.
+> # TableViewStudy
+ - TableViewWithoutSB
+   - 스토리보드 없이 테이블 뷰로 만든 앱
+ - TableViewWithoutSB_MVVM
+   - 스토리보드 없이 테이블 뷰로 만든 앱을 MVVM 디자인 패턴으로 리팩토링
+
+> # CollectionViewStudy
+ - CollectionViewWithoutSB
+   - 스토리보드 없이 컬렉션 뷰로 만든 앱
+   - Animation을 적용해봤습니다.
+   - MVVM 디자인 패턴으로 작성했습니다.
+
+> # AppleMusicApp
+ - AppleMusicWithoutSB
+   - AVFoundation 사용해보기
+   - CollectionView HeaderView 추가해보기
+   - CollectionView CustomCell 사용해보기
