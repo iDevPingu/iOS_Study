@@ -10,7 +10,7 @@
   - [멀티 프로세서 스케줄링](https://icksw.tistory.com/127?category=878876)
  > ## 메모리 가상화
   - [메모리 가상화를 위한 메모리 추상화, 주소 공간(Abstraction, Address Space)](https://icksw.tistory.com/129?category=878876)
-  - [C언어에서 메모리르 사용하기 위하 Memory API](https://icksw.tistory.com/142?category=878876)
+  - [C언어에서 메모리를 사용하기 위한 Memory API](https://icksw.tistory.com/142?category=878876)
   - [메모리 가상화를 위한 주소 변환(Address Translation)](https://icksw.tistory.com/143?category=878876)
   - [Segmentation을 사용한 가변 크기 메모리 관리 및 추상화](https://icksw.tistory.com/145?category=878876)
   - [메모리를 가변크기로 할당하여 사용할 때 여유 공간 관리방법(Free Space Management)](https://icksw.tistory.com/147?category=878876)
