@@ -1,4 +1,4 @@
-# IckiOS
+# PinguiOS
 ## 블로그 : https://icksw.tistory.com
 
 # Swift Study
