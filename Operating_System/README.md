@@ -15,3 +15,4 @@
   - [Segmentation을 사용한 가변 크기 메모리 관리 및 추상화](https://icksw.tistory.com/145?category=878876)
   - [메모리를 가변크기로 할당하여 사용할 때 여유 공간 관리방법(Free Space Management)](https://icksw.tistory.com/147?category=878876)
   - [Paging을 사용한 고정 크기 메모리 관리 및 추상화](https://icksw.tistory.com/148?category=878876)
+  - [Paging 메모리 관리를 빠르게 하기 위한 TLB](https://icksw.tistory.com/149)
