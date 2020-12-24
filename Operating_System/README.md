@@ -16,3 +16,5 @@
   - [메모리를 가변크기로 할당하여 사용할 때 여유 공간 관리방법(Free Space Management)](https://icksw.tistory.com/147?category=878876)
   - [Paging을 사용한 고정 크기 메모리 관리 및 추상화](https://icksw.tistory.com/148?category=878876)
   - [Paging 메모리 관리를 빠르게 하기 위한 TLB](https://icksw.tistory.com/149)
+  - [Paging 기법의 Page Table의 크기 줄이기](https://icksw.tistory.com/150)
+  - [Swap 공간을 활용한 메모리 관리와 Page Fault](https://icksw.tistory.com/151)
