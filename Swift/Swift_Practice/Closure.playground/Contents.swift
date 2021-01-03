@@ -1,14 +1,19 @@
 import Foundation
 
-let names = ["Pingu", "Pinga", "Roby"]
+var names = ["Roby", "Pinga", "Pingu"]
 
-func backward(_ s1: String, _ s2: String) -> Bool {
-    return s1 > s2
+func sortByAlphabetOrder(_ s1: String, _ s2: String) -> Bool {
+    return s1 < s2
+}
+//names = names.sorted(by: sortByAlphabetOrder)
+names = names.sorted { (s1: String, s2: String) -> Bool in
+    return s1 < s2
 }
 
-var reversedName = names.sorted(by: backward)
+print(names)
 
-print(reversedName)
+var reversedName = names.sorted(by: sortByAlphabetOrder)
+
 
 // closure 사용
 reversedName = names.sorted(by: { (s1: String, s2: String) -> Bool in
@@ -82,23 +87,85 @@ print(copy())
 print(copy())
 
 // Escaping 클로저 ***
-var completionHandlers = [() -> Void]()
-func withEscapingClosure(completion: @escaping () -> Void) {
-    completion()
-    completionHandlers.append(completion)
+var 전역변수 = [() -> Void]()
+//func withEscapingClosure(completion: @escaping () -> Void) {
+//    completion()
+//    전역변수.append(completion)
+//}
+
+//func noEscapingClosure(completion: () -> Void) {
+//    completion()
+//    전역변수.append(completion)
+//}
+
+
+
+
+
+//var completionHandlers = [() -> Void]()
+//func withEscapingClosure(completion: @escaping () -> Void) {
+//    completion()
+//    completionHandlers.append(completion)
+//}
+
+//func nonEscapingClosure(completion: () -> Void) {
+//    completion()
+//    // completion 클로저가 escaping이 아니므로 밖의 것에서 사용 불가?
+//    completionHandlers.append {
+//        print("This is nonEscapingClosure")
+//    }
+//}
+//let testClosure = { print("testClosure 호출") }
+//let escapingClosureTest: () = withEscapingClosure(completion: testClosure)
+//let nonEscapingClosureTets: () = nonEscapingClosure(completion: testClosure)
+//print(completionHandlers[1])
+
+// escaping closure
+
+전역변수 = [() -> Void]()
+
+func withEscapingClosure(closure: @escaping () -> Void){
+    closure()
 }
 
-func nonEscapingClosure(completion: () -> Void) {
-    completion()
-    // completion 클로저가 escaping이 아니므로 밖의 것에서 사용 불가?
-    completionHandlers.append {
-        print("This is nonEscapingClosure")
+func withoutEscapingClosure(closure: () -> Void) {
+    closure()
+}
+var x = 0
+class exampleClass {
+    var x = 0
+    func testFunction() {
+        withEscapingClosure { [self] in
+            x = 100
+        }
+        withoutEscapingClosure {
+            x = 50
+        }
     }
 }
-let testClosure = { print("testClosure 호출") }
-let escapingClosureTest: () = withEscapingClosure(completion: testClosure)
-let nonEscapingClosureTets: () = nonEscapingClosure(completion: testClosure)
-print(completionHandlers[1])
+
+let a = exampleClass()
+a.testFunction()
+print(x)
+print(a.x)
+
+struct exampleStruct {
+    var y = 10
+    mutating func testFunction() {
+//        withEscapingClosure {
+//            y = 100
+//        }
+        withoutEscapingClosure {
+            self.y = 200
+        }
+    }
+}
+
+
+var b = exampleStruct()
+b.testFunction()
+print(x)
+print(b.y)
 
 // AutoClosure
 var customersInLine = ["Pingu", "Pinga", "JiWorm", "Roby"]
@@ -131,3 +198,18 @@ print(customersInLine)
 for customersProvider in customersProviders {
     print("Now serving \(customersProvider())")
 }
+
+
+// Auto Closure
+func returnPinguFunction() -> String {
+    return "Pingu"
+}
+
+func exampleFunction(_ autoclosure: @autoclosure () -> String) {
+    print(autoclosure())
+}
+
+exampleFunction(returnPinguFunction())
+
+exampleFunction("hello")
+
