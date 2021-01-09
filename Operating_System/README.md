@@ -21,4 +21,12 @@
  >> - [Swap 공간을 활용한 메모리 관리와 Page Fault](https://icksw.tistory.com/151)
  >> - [메모리에서 교체할 Page를 결정하는 방법](https://icksw.tistory.com/153)
 > # Concurrency
+>> ### Thread
+ >> - [Concurrency(동시성)구현에서 Thread(스레드)의 문제점](https://icksw.tistory.com/155?category=878876)
+ >> - [C언어 스레드 API 사용법(Thread API)](https://icksw.tistory.com/156?category=878876)
+>> ### Lock
+ >> - [Lock으로 Mutual Exclusion(상호 배제) 구현하기](https://icksw.tistory.com/158?category=878876)
+ >> - [Lock을 사용하여 Concurrency를 지원하는 자료구조 만들기](https://icksw.tistory.com/162?category=878876)
+ >> - [Synchronization(동기화)를 위한 condition variables(조건 변수)](https://icksw.tistory.com/164?category=878876)
+>> ### Semaphore
 > # Persistence
