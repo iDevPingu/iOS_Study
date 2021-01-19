@@ -29,4 +29,8 @@
  >> - [Lock을 사용하여 Concurrency를 지원하는 자료구조 만들기](https://icksw.tistory.com/162?category=878876)
  >> - [Synchronization(동기화)를 위한 condition variables(조건 변수)](https://icksw.tistory.com/164?category=878876)
 >> ### Semaphore
+ >> - [Semephore(세마포어)를 사용하여 concurrency(동시성) 구현하기)](https://icksw.tistory.com/167)
+>> ### Deadlock
+>> - [Concurrency의 문제점 Deadlock](https://icksw.tistory.com/170?category=878876)
 > # Persistence
+ >> - [I/O Device 알아보기](https://icksw.tistory.com/171?category=878876)
