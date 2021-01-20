@@ -15,6 +15,7 @@
 		6015F71925A0AFC30033B205 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6015F71725A0AFC30033B205 /* LaunchScreen.storyboard */; };
 		6015F72425A0AFC30033B205 /* MPRemoteCommandCenterPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6015F72325A0AFC30033B205 /* MPRemoteCommandCenterPracticeTests.swift */; };
 		6015F72F25A0AFC30033B205 /* MPRemoteCommandCenterPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6015F72E25A0AFC30033B205 /* MPRemoteCommandCenterPracticeUITests.swift */; };
+		605838E925A221D0009932CC /* Pingu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 605838E825A221D0009932CC /* Pingu.jpeg */; };
 		60EA0DA425A1A397004BE5FC /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 60EA0DA325A1A397004BE5FC /* sample.mp3 */; };
 		60EA0DB525A1ADA0004BE5FC /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA0DB425A1ADA0004BE5FC /* VideoViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		6015F72A25A0AFC30033B205 /* MPRemoteCommandCenterPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MPRemoteCommandCenterPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6015F72E25A0AFC30033B205 /* MPRemoteCommandCenterPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPRemoteCommandCenterPracticeUITests.swift; sourceTree = "<group>"; };
 		6015F73025A0AFC30033B205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		605838E825A221D0009932CC /* Pingu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pingu.jpeg; sourceTree = "<group>"; };
 		60EA0DA325A1A397004BE5FC /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
 		60EA0DB425A1ADA0004BE5FC /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				6015F71725A0AFC30033B205 /* LaunchScreen.storyboard */,
 				6015F71A25A0AFC30033B205 /* Info.plist */,
 				60EA0DA325A1A397004BE5FC /* sample.mp3 */,
+				605838E825A221D0009932CC /* Pingu.jpeg */,
 			);
 			path = MPRemoteCommandCenterPractice;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				6015F71925A0AFC30033B205 /* LaunchScreen.storyboard in Resources */,
 				6015F71625A0AFC30033B205 /* Assets.xcassets in Resources */,
 				60EA0DA425A1A397004BE5FC /* sample.mp3 in Resources */,
+				605838E925A221D0009932CC /* Pingu.jpeg in Resources */,
 				6015F71425A0AFC30033B205 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

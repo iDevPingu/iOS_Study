@@ -27,7 +27,9 @@ class VideoViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.videoPlayer.pause()
-        print("disappear")
+        UIApplication.shared.endReceivingRemoteControlEvents()
+        MPRemoteCommandCenter.shared().pauseCommand.removeTarget(self)
+        
     }
 
 
@@ -62,7 +64,6 @@ class VideoViewController: UIViewController {
             self.videoPlayer.play()
             return MPRemoteCommandHandlerStatus.success
         }
-        
         remoteCommandCenter.pauseCommand.addTarget { (commandEvent) -> MPRemoteCommandHandlerStatus in
             self.videoPlayer.pause()
             return MPRemoteCommandHandlerStatus.success
