@@ -21,21 +21,29 @@
  - 요약 : 
 > ### Q : 자신만의 Custom View를 만들려면 어떻게 해야하는지 설명하시오.
 > ### Q : iOS 앱을 만들고, User Interface를 구성하는 데 필수적인 프레임워크 이름은 무엇인가?
- - A : UIKit
+ - [UIKit](https://developer.apple.com/documentation/uikit)
+ - A : Main thread, Main Dispatchqueue
 > ### Q : Foundation Kit은 무엇이고 포함되어 있는 클래스들은 어떤 것이 있는지 설명하시오.
 > ### Q : Delegate란 무언인가 설명하고, retain 되는지 안되는지 그 이유를 함께 설명하시오.
 > ### Q : NotificationCenter 동작 방식과 활용 방안에 대해 설명하시오.
+ - A : 
 > ### Q : UIKit 클래스들을 다룰 때 꼭 처리해야하는 애플리케이션 쓰레드 이름은 무엇인가?
+ - A : main
 > ### Q : TableView를 동작 방식과 화면에 Cell을 출력하기 위해 최소한 구현해야 하는 DataSource 메서드를 설명하시오.
  - A : 2 개의 메서드가 있습니다.
  - tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int 메서드는 테이블 뷰에서 섹션 당 Row의 개수를 정하는 메서드 입니다.
  - tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell 메서드는 테이블 뷰에서 특정 indexPath에 표시할 cell을 반환하는 메서드입니다. 여기서 row의 개수는 바로 위의 메서드에서 정해집니다.
  - [UITableViewDataSource](https://icksw.tistory.com/15)
 > ### Q : 하나의 View Controller 코드에서 여러 TableView Controller 역할을 해야 할 경우 어떻게 구분해서 구현해야 하는지 설명하시오
+ - 여러개의 테이블 뷰를 addSubview나 스토리보드에서 추가하고 각각의 뷰마다 적절한 constraint를 줘서 구역을 나눕니다. 그런 뒤 각각의 테이블 뷰에 필요한 TableViewCell을 코드로 만들거나 스토리보드로 추가하고 코드로 추가했다면 ViewController에서 register 메서드로 추가해줍니다. 이 때 cellIdentifier에 주의해야합니다. 그런 뒤 UITableViewDataSource 프로토콜의 필수 메서드에서 각각의 테이블 뷰를 구분하여 셀을 구성하면 됩니다. 메서드들에 들어오는 UITableView 객체로 구분할 수 있습니다.
 > ### Q : App Bundle의 구조와 역할에 대해 설명하시오.
 > ### Q : View 객체에 대해 설명하시오.
+ - [UIView 알아보기](https://icksw.tistory.com/139)
+ - A : UIView는 간단하게 말하면 화면의 직사각형 모양을 관리하는 객체입니다. 앱이 사용자와 상호작용하는 주요 방법이기 때문에 Draw, Animation, Layout, Subview, event handling에 대한 책임이 있습니다.
 > ### Q : UIView 에서 Layer 객체는 무엇이고 어떤 역할을 담당하는지 설명하시오.
 > ### Q : UIWindow 객체의 역할은 무엇인가?
+ - [UIWindow 알아보기](https://icksw.tistory.com/140)
+ - A : 앱의 UI 배경과 이벤트를 뷰로 전달하는 객체입니다. 뷰 컨트롤러와 함께 이벤트를 처리하고 앱 작동에 필수적이 많은 작업을 수행합니다. iOS12 까지는 하나의 window만 제공했는데 iOS13부터 multiwindow를 지원하게 되면서 여러개의 window를 사용할 수 있게 되었고 이로인해 [SceneDelegate](https://icksw.tistory.com/137)가 생겨나게 되었습니다. 
 > ### Q : UINavigationController 의 역할이 무엇인지 설명하시오.
 > ### Q : 모든 View Controller 객체의 상위 클래스는 무엇이고 그 역할은 무엇인가?
 > ### Q : 앱이 시작할 때 main.c 에 있는 UIApplicationMain 함수에 의해서 생성되는 객체는 무엇인가?
