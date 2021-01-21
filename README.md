@@ -13,7 +13,7 @@
  > ### [iOS_Function_Practice](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_Funtion_Practice)
   - iOS 개발 기능들 연습 코드
  > ### [iOS_View_Practice](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_View_Practice)
-  - iOS 기본적인 뷰 연습 코드
+  - iOS 여러가지 뷰 연습 코드
   
 # [Swift](https://github.com/jaicoco/iOS_Study/tree/master/Swift)
  - Apple Swift 공식문서를 읽고 정리한 내용
