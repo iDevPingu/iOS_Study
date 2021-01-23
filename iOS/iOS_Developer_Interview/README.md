@@ -3,7 +3,8 @@
 # iOS Developer Interview (from : https://github.com/JeaSungLEE/iOSInterviewquestions)
 > ## iOS
 > ### Q : Bounds 와 Frame 의 차이점을 설명하시오.
- - A : [Bounds와 Frame의 차이점](https://icksw.tistory.com/132)
+ - [Bounds와 Frame의 차이점](https://icksw.tistory.com/132)
+ - A : Bounds는 뷰 자체 좌표계로 자신의 위치를 표현하는 것이고 Frame은 뷰의 슈퍼뷰의 좌표계로 자신의 위치를 표현하는 방법입니다.
 > ### Q : 실제 디바이스가 없을 경우 개발 환경에서 할 수 있는 것과 없는 것을 설명하시오.
  - A : 실제 디바이스가 없을 경우에 카메라 촬영 기능을 사용할 수 없습니다. 하지만 앨범은 작동하기 때문에 PhotoKit을 사용하는것은 가능합니다. 또한 광센서, 근접 센서도 사용할 수 없습니다. 시뮬레이터에서의 성능은 실제 디바이스에서의 성능과 차이가 있을 수 있기 때문에 정확한 테스트라고 볼 수는 없습니다. 즉 시뮬레이터에서 할 수 있는 것은 UI확인과 기본적이 기능 정도입니다.
  - [simulator 설명서](https://help.apple.com/simulator/mac/current/#/deve44b57b2a)
