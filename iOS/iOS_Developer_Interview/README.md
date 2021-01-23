@@ -5,24 +5,28 @@
 > ### Q : Bounds 와 Frame 의 차이점을 설명하시오.
  - A : [Bounds와 Frame의 차이점](https://icksw.tistory.com/132)
 > ### Q : 실제 디바이스가 없을 경우 개발 환경에서 할 수 있는 것과 없는 것을 설명하시오.
- - A : 실제 디바이스가 없을 경우에 카메라 촬영 기능을 사용할 수 없습니다. 하지만 앨범은 작동학 때문에 PhotoKit을 사용하는것은 가능합니다. 또한 광센서, 근접 센서도 사용할 수 없습니다. 시뮬레이터에서의 성능은 실제 디바이스에서의 성능과 차이가 있을 수 있기 때문에 정확한 테스트라고 볼 수는 없습니다.
+ - A : 실제 디바이스가 없을 경우에 카메라 촬영 기능을 사용할 수 없습니다. 하지만 앨범은 작동하기 때문에 PhotoKit을 사용하는것은 가능합니다. 또한 광센서, 근접 센서도 사용할 수 없습니다. 시뮬레이터에서의 성능은 실제 디바이스에서의 성능과 차이가 있을 수 있기 때문에 정확한 테스트라고 볼 수는 없습니다. 즉 시뮬레이터에서 할 수 있는 것은 UI확인과 기본적이 기능 정도입니다.
  - [simulator 설명서](https://help.apple.com/simulator/mac/current/#/deve44b57b2a)
  - [simulator 차이점](https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/iOS_Simulator_Guide/TestingontheiOSSimulator/TestingontheiOSSimulator.html)
 > ### Q : 앱이 foreground에 있을 때와 background에 있을 때 어떤 제약사항이 있나요?
+ - [Foreground, Background 알아보기](https://icksw.tistory.com/178)
+ - A : 앱이 백그라운드 상태가 되면 시스템은 시간 할당을 해주지 않고 특수한 상황에만 시간할당을 해줍니다. 블루투스 통신, 사용자 위치 정보, 서버 업데이트, Voice over IP(음성 인터넷 프로토콜), Apple Push Notification, AirPlay, Picture in Picture 비디오를 사용한 오디오 통신, 외부 악세서리 통신의 경우에만 시스템은 백그라운드 앱에 시간을 할당해줍니다.
 > ### Q : 상태 변화에 따라 다른 동작을 처리하기 위한 앱델리게이트 메서드들을 설명하시오.
 > ### Q : scene delegate에 대해 설명하시오.
  - A : [Multiple Window를 위한 Scenedelegate](https://icksw.tistory.com/137)
+ - A : 간단하게 말하자면 iOS 13 업데이트로 인해 아이패드에서 multiple window를 지원하게 되면서 하나의 앱이 여러개의 window를 가질 수 있게 되었고 이들을 처리하기 위하여 기존의 방식인 window를 1개만 가질 수 있는 방식을 확장한 것 입니다. 이로 인해 UI LifeCycle의 책임을 Scene Delegate가 가지게 되었습니다.
 > ### Q : 앱이 In-Active 상태가 되는 시나리오를 설명하시오.
 > ### Q : NSOperationQueue 와 GCD Queue 의 차이점을 설명하시오.
- - A : [NSOperationQueue](https://icksw.tistory.com/35), [GCD Queue](https://icksw.tistory.com/70)
- - 요약 : 
+ - 개념 : [NSOperationQueue](https://icksw.tistory.com/35), [GCD Queue](https://icksw.tistory.com/70)
+ - 사용법 : [NSOperatinnQueue](https://icksw.tistory.com/105), [GCD Queue](https://icksw.tistory.com/99)
+ - A : NSOperationQueue는 종속성을 지원하며 작업이라는 객체를 통해 명령을 수행합니다. 이 때 작업을 시작하는 방법은 start 메서드를 호출하거나 큐에 추가하여 실행 할 수 있습니다. Grand Central Dispatch Queue는 작업 객체를 따로 만들 필요 없이 코드 블록으로 작업을 만들고 큐에 넣어 실행할 수 있습니다.
 > ### Q : GCD API 동작 방식과 필요성에 대해 설명하시오.
- - A : [GCD Queue](https://icksw.tistory.com/70)
- - 요약 : 
+ - [GCD Queue](https://icksw.tistory.com/70)
+ - A : 스레드를 직접 만들고 작업하는 것 보다 간단하게 동시성을 구현할 수 있기 때문에 유용합니다. 또한 스레드를 직접 만들때 고려해줘야할 공유 자원에 대한 접근, lock 등에 대한 것들을 직접하면 실수 할 수 있는데 GCD API를 사용하여 실수 없이 편리하게 사용할 수 있습니다.
 > ### Q : 자신만의 Custom View를 만들려면 어떻게 해야하는지 설명하시오.
+ - A : 어떤 타입의 커스텀 뷰를 만드는지를 결정하고 직접 코드로 만들 수도 있고 xib를 사용하여 만들 수도 있습니다. 직접 코드로 만들게 되면 addSubview와 같은 메서드를 활용하면 됩니다.
 > ### Q : iOS 앱을 만들고, User Interface를 구성하는 데 필수적인 프레임워크 이름은 무엇인가?
- - [UIKit](https://developer.apple.com/documentation/uikit)
- - A : Main thread, Main Dispatchqueue
+ - A : [UIKit](https://developer.apple.com/documentation/uikit)
 > ### Q : Foundation Kit은 무엇이고 포함되어 있는 클래스들은 어떤 것이 있는지 설명하시오.
 > ### Q : Delegate란 무언인가 설명하고, retain 되는지 안되는지 그 이유를 함께 설명하시오.
 > ### Q : NotificationCenter 동작 방식과 활용 방안에 대해 설명하시오.
@@ -45,13 +49,19 @@
  - [UIWindow 알아보기](https://icksw.tistory.com/140)
  - A : 앱의 UI 배경과 이벤트를 뷰로 전달하는 객체입니다. 뷰 컨트롤러와 함께 이벤트를 처리하고 앱 작동에 필수적이 많은 작업을 수행합니다. iOS12 까지는 하나의 window만 제공했는데 iOS13부터 multiwindow를 지원하게 되면서 여러개의 window를 사용할 수 있게 되었고 이로인해 [SceneDelegate](https://icksw.tistory.com/137)가 생겨나게 되었습니다. 
 > ### Q : UINavigationController 의 역할이 무엇인지 설명하시오.
-> ### Q : 모든 View Controller 객체의 상위 클래스는 무엇이고 그 역할은 무엇인가?
+> ### Q : 모든 ViewController 객체의 상위 클래스는 무엇이고 그 역할은 무엇인가?
 > ### Q : 앱이 시작할 때 main.c 에 있는 UIApplicationMain 함수에 의해서 생성되는 객체는 무엇인가?
 > ### Q : UIApplication 객체의 컨트롤러 역할은 어디에 구현해야 하는가?
 > ### Q : 앱의 콘텐츠나 데이터 자체를 저장/보관하는 특별한 객체를 무엇이라고 하는가?
 > ### Q : 앱 화면의 콘텐츠를 표시하는 로직과 관리를 담당하는 객체를 무엇이라고 하는가?
 > ### Q : Swift의 클로저와 Objective-C의 블록은 어떤 차이가 있는가?
 > ### Q : App의 Not running, Inactive, Active, Background, Suspended에 대해 설명하시오.
+ - A :
+ Not Running : 
+ InActive :
+ Active :
+ Background : 
+ Suspended : 
 > ### Q : App thinning에 대해서 설명하시오.
 > ### Q : Global DispatchQueue 의 Qos 에는 어떤 종류가 있는지, 각각 어떤 의미인지 설명하시오.
  - A : Qos(Quality Of Service)란 작업 실행의 우선순위를 지정합니다. qos를 정의하면 앱이 수행하려는 작업의 의도를 알 수 있고 작업 실행의 우선순위 결정에 영향을 줍니다.
@@ -63,10 +73,13 @@
    - unspecified : qos를 설정하지 않음
 > ## AutoLayout
 > ### Q : 오토레이아웃을 코드로 작성하는 방법은 무엇인가? (3가지)
+ - [Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/)
+ - A : SnapKit 사용하는 방법, 뷰 자체 constraint들에 제약조건을 주는 방법
 > ### Q : hugging, resistance에 대해서 설명하시오.
 > ### Q : Intrinsic Size에 대해서 설명하시오.
 > ### Q : 스토리보드를 이용했을때의 장단점을 설명하시오.
 > ### Q : Safearea에 대해서 설명하시오.
+ - A : 
 > ### Q : Left Constraint 와 Leading Constraint 의 차이점을 설명하시오.
 
 > ## Swift
