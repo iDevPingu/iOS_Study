@@ -28,6 +28,7 @@
 > ### Q : iOS 앱을 만들고, User Interface를 구성하는 데 필수적인 프레임워크 이름은 무엇인가?
  - A : [UIKit](https://developer.apple.com/documentation/uikit)
 > ### Q : Foundation Kit은 무엇이고 포함되어 있는 클래스들은 어떤 것이 있는지 설명하시오.
+ - A : Foundation Framework에는 데이터 저장, 영속성, 텍스트 처리, 날짜 및 시간 계산, 정렬 및 필터링, 네트워킹을 포함한 앱 및 프레임워크에 대한 기본적인 기능을 제공합니다. Numbers, Data, String, Collection, Date, Time Data Formatting, Filters, sorting, Task Management, asset, bundle, Notification, App Extension Support, Errors, Exceptions, file system, URL 등의 다양한 기본적인 클래스들이 정의되어 있습니다.
 > ### Q : Delegate란 무언인가 설명하고, retain 되는지 안되는지 그 이유를 함께 설명하시오.
 > ### Q : NotificationCenter 동작 방식과 활용 방안에 대해 설명하시오.
  - A : 
@@ -84,3 +85,13 @@
 
 > ## Swift
 > ### Q : Optional 이란 무엇인지 설명하시오.
+ - A : 값이 있을 수도 없을 수도 있는 값을 처리할 때 사용하는 방법입니다. 만약 값이 없다면 nil이 존재하게 되며 값이 있다면 뭔가의 값이 존재하게 됩니다. 하지만 옵셔널 값을 바로 사용할 수는 없고 값이 있는지 없는지를 확인하는 과정인 wrapping 과정이 필요합니다. 이를 통해 일반적인 값으로 처리되어 사용할 수 있습니다.
+> ### Q : Fast Enumeration 이란 무엇인지 설명하시오.
+> ### Q : Struct 가 무엇이고 어떻게 사용하는지 설명하시오.
+ - A : 구조체라고 불리는 Struct는 값 타입의 객체입니다. 
+> ### Q : instance 메서드와 class 메서드의 차이점을 설명하시오.
+ - A : instance 메서드를 사용하기 위해선 인스턴스를 먼저 만들고 메서드를 사용할 수 있지만 class 메서드는 타입 메서드의 일종으로 타입 메서드란 타입 자체에서 호출 가능한 메서드 입니다. 이 때 가능한 것으로는 struct, enum, class가 있는데 class만 참조 타입이므로 class라는 키워드로 타입 메서드를 만들 수 있습니다. Struct나 enum의 경우에는 static으로 만들 수 있습니다. 이러한 이뉴는 클래스에는 상속이라는 개념이 존재하여 이러한 메서드도 override 할 수 있게 하기 위해서입니다.
+> ### Q : Delegate 패턴을 활용하는 경우를 예를 들어 설명하시오.
+> ### Q : Singleton 패턴을 활용하는 경우를 예를 들어 설명하시오.
+ - A : 앱 내에서 하나의 객체만 존재하게 만들어서 이를 공유하여 사용하기 좋을 때 사용합니다.
+
