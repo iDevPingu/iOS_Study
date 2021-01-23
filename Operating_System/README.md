@@ -34,4 +34,4 @@
 >> - [Concurrency의 문제점 Deadlock](https://icksw.tistory.com/170)
 > # Persistence
  >> - [I/O Device 알아보기](https://icksw.tistory.com/171)
- >> - [Hard Disk Drive 알아보기)(https://icksw.tistory.com/177)
+ >> - [Hard Disk Drive 알아보기](https://icksw.tistory.com/177)
