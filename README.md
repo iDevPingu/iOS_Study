@@ -1,6 +1,9 @@
 # PinguiOS
 ## 블로그 : https://icksw.tistory.com
 
+# [Algorithm](https://github.com/jaicoco/iOS_Study/tree/master/Algorithm)
+ - 알고리즘 문제 풀이 코드
+
 # [Computer_Organization](https://github.com/jaicoco/iOS_Study/tree/master/Computer_Organization)
  - 컴퓨터 구조 공부한 내용 정리
  
