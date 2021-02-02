@@ -21,27 +21,29 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIApplication.shared.beginReceivingRemoteControlEvents()
-        self.remoteCommandCenterSetting()
-        self.remoteCommandInfoCenterSetting()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.player.pause()
-        UIApplication.shared.endReceivingRemoteControlEvents()
     }
 
     @IBAction func touchUpPlayButton(_ sender: UIButton) {
         // 재생 합니다.
-        self.player.play()
-        self.remoteCommandCenterSetting()
-        self.remoteCommandInfoCenterSetting()
+        self.play()
     }
     
     @IBAction func touchUpPauseButton(_ sender: UIButton) {
         // 재생을 멈춥니다.
+        self.pause()
+    }
+    
+    func play() {
+        self.player.play()
+        MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPNowPlayingInfoPropertyPlaybackRate] = 1
+    }
+    func pause() {
         self.player.pause()
+        MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPNowPlayingInfoPropertyPlaybackRate] = 0
     }
     
     func initPlayer() {
@@ -76,18 +78,27 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate {
         // remote control event 받기 시작
         UIApplication.shared.beginReceivingRemoteControlEvents()
         let center = MPRemoteCommandCenter.shared()
-        
+        center.playCommand.removeTarget(nil)
+        center.pauseCommand.removeTarget(nil)
         // 제어 센터 재생버튼 누르면 발생할 이벤트를 정의합니다.
         center.playCommand.addTarget { (commandEvent) -> MPRemoteCommandHandlerStatus in
             self.player.play()
-            return MPRemoteCommandHandlerStatus.success
+            MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPNowPlayingInfoPropertyElapsedPlaybackTime] = NSNumber(value: self.player.currentTime)
+            // 재생 할 땐 now playing item의 rate를 1로 설정하여 시간이 흐르도록 합니다.
+            MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPNowPlayingInfoPropertyPlaybackRate] = 1
+            return .success
         }
+        
         // 제어 센터 pause 버튼 누르면 발생할 이벤트를 정의합니다.
         center.pauseCommand.addTarget { (commandEvent) -> MPRemoteCommandHandlerStatus in
             self.player.pause()
-            return MPRemoteCommandHandlerStatus.success
+            MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPNowPlayingInfoPropertyElapsedPlaybackTime] = NSNumber(value: self.player.currentTime)
+            // 일시정지 할 땐 now playing item의 rate를 0으로 설정하여 시간이 흐르지 않도록 합니다.
+            MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPNowPlayingInfoPropertyPlaybackRate] = 0
+            return .success
         }
-        
+        center.playCommand.isEnabled = true
+        center.pauseCommand.isEnabled = true
     }
     
     func remoteCommandInfoCenterSetting() {
@@ -102,11 +113,11 @@ class AudioViewController: UIViewController, AVAudioPlayerDelegate {
             })
         }
         // 콘텐츠 총 길이
-        nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = player.duration
+        nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = self.player.duration
         // 콘텐츠 재생 시간에 따른 progressBar 초기화
-        nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.rate
+        nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = 1
         // 콘텐츠 현재 재생시간
-        nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = player.currentTime
+        nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = NSNumber(value: self.player.currentTime)
         
         center.nowPlayingInfo = nowPlayingInfo
         
