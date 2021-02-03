@@ -99,4 +99,38 @@
 > ### Q : Delegate 패턴을 활용하는 경우를 예를 들어 설명하시오.
 > ### Q : Singleton 패턴을 활용하는 경우를 예를 들어 설명하시오.
  - A : 앱 내에서 하나의 객체만 존재하게 만들어서 이를 공유하여 사용하기 좋을 때 사용합니다.
+> ### Q : KVO 동작 방식에 대해 설명하시오.
+> ### Q : Delegates와 Notification 방식의 차이점에 대해 설명하시오.
+> ### Q : 멀티 쓰레드로 동작하는 앱을 작성하고 싶을 때 고려할 수 있는 방식들을 설명하시오.
+> ### Q : MVC 구조에 대해 블록 그림을 그리고, 각 역할과 흐름을 설명하시오.
+> ### Q : 프로토콜이란 무엇인지 설명하시오.
+ - [Protocol 공식문서 정리](https://icksw.tistory.com/62)
+> ### Q : Hashable이 무엇이고, Equatable을 왜 상속해야 하는지 설명하시오.
+> ### Q : mutating 키워드에 대해 설명하시오.
+> ### Q : 탈출 클로저에 대하여 설명하시오.
+ - [AutoClosure, EscapingClosure 알아보기](https://icksw.tistory.com/157)
+> ### Q : Extension에 대해 설명하시오.
+ - [Extension 공식문서 정리](https://icksw.tistory.com/59)
+ - A :
+> ### Q : 접근 제어자의 종류엔 어떤게 있는지 설명하시오.
+ - [Access Control 공식문서 정리](https://icksw.tistory.com/118)
+> ### Q : defer란 무엇인지 설명하시오.
+> ### Q : defer가 호출되는 순서는 어떻게 되고, defer가 호출되지 않는 경우를 설명하시오.
 
+> ## ARC
+> ### [Automatic Reference Counting 공식문서 정리](https://icksw.tistory.com/80)
+> ### Q : ARC란 무엇인지 설명하시오.
+> ### Q : Retain Count 방식에 대해 설명하시오.
+> ### Q : Strong 과 Weak 참조 방식에 대해 설명하시오.
+> ### Q : ARC 대신 Manual Reference Count 방식으로 구현할 때 꼭 사용해야 하는 메서드들을 쓰고 역할을 설명하시오.
+> ### Q : retain 과 assign 의 차이점을 설명하시오.
+> ### Q : 순환 참조에 대하여 설명하시오.
+> ### Q : 강한 순환 참조 (Strong Reference Cycle) 는 어떤 경우에 발생하는지 설명하시오.
+> ### Q : 특정 객체를 autorelease 하기 위해 필요한 사항과 과정을 설명하시오.
+> ### Q : Autorelease Pool을 사용해야 하는 상황을 두 가지 이상 예로 들어 설명하시오.
+> ### Q : 다음 코드를 실행하면 어떤 일이 발생할까 추측해서 설명하시오. Ball *ball = [[[[Ball alloc] init] autorelease] autorelease];
+
+> ## Functional Programming
+> ### Q : 함수형 프로그래밍이 무엇인지 설명하시오.
+> ### Q : 고차 함수가 무엇인지 설명하시오.
+> ### Q : Swift Standard Library의 map, filter, reduce, compactMap, flatMap에 대하여 설명하시오.
