@@ -12,27 +12,27 @@ class PinkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("회색 View Did Load")
+        print("파랑 View Did Load")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("회색 View Will Appear")
+        print("파랑 View Will Appear")
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("회색 View Did Appear")
+        print("파랑 View Did Appear")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("회색 View Will Disappear")
+        print("파랑 View Will Disappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("회색 View Did Diappear")
+        print("파랑 View Did Diappear")
     }
     
     
