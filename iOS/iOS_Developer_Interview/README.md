@@ -76,6 +76,7 @@
    - utility : 사용자가 적극적으로 추적하지 않는 작업에 대한 qos
    - background : 생성된 것의 유지 관리, 정리 작업에 대한 qos
    - unspecified : qos를 설정하지 않음
+   
 > ## AutoLayout
 > ### Q : 오토레이아웃을 코드로 작성하는 방법은 무엇인가? (3가지)
  - [Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/)
@@ -111,7 +112,7 @@
  - [AutoClosure, EscapingClosure 알아보기](https://icksw.tistory.com/157)
 > ### Q : Extension에 대해 설명하시오.
  - [Extension 공식문서 정리](https://icksw.tistory.com/59)
- - A :
+ - A : 익스텐션은 기존에 존재하던 타입에 새로운 기능을 추가하는 기능을 제공합니다. 익스텐션을 사용하여 인스턴스 메서드, 타입 메서드, 생성자, 서브 스크립트, 중첩 타입 정의, 기존 타입이 특정 프로토콜을 준수하게 만들기, 계산 프로퍼티를 추가할 수 있습니다. extension 키워드를 특정 타입 앞에 적어서 기능을 추가하면 되며 저장 프로퍼티나 기존에 존재하던 프로퍼티에 대한 옵저버를 만들 수는 없습니다. 생성자를 만들 때에도 convenience 생성자는 만들 수 있지만 designated 생성자는 만들 수 없습니다. 구조체나 열거형에 인스턴스 값을 수정하는 메서드를 만들 땐 mutating 키워드를 사용해야합니다.
 > ### Q : 접근 제어자의 종류엔 어떤게 있는지 설명하시오.
  - [Access Control 공식문서 정리](https://icksw.tistory.com/118)
 > ### Q : defer란 무엇인지 설명하시오.
