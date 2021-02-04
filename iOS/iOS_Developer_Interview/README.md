@@ -58,6 +58,8 @@
 > ### Q : 앱이 시작할 때 main.c 에 있는 UIApplicationMain 함수에 의해서 생성되는 객체는 무엇인가?
 > ### Q : UIApplication 객체의 컨트롤러 역할은 어디에 구현해야 하는가?
 > ### Q : 앱의 콘텐츠나 데이터 자체를 저장/보관하는 특별한 객체를 무엇이라고 하는가?
+ - [UserDefaults를 사용하여 정보 저장하기](https://icksw.tistory.com/146)
+ - A : UserDefaults
 > ### Q : 앱 화면의 콘텐츠를 표시하는 로직과 관리를 담당하는 객체를 무엇이라고 하는가?
 > ### Q : Swift의 클로저와 Objective-C의 블록은 어떤 차이가 있는가?
 > ### Q : App의 Not running, Inactive, Active, Background, Suspended에 대해 설명하시오.
