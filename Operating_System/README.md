@@ -35,3 +35,5 @@
 > # Persistence
  >> - [I/O Device 알아보기](https://icksw.tistory.com/171)
  >> - [Hard Disk Drive 알아보기](https://icksw.tistory.com/177)
+ >> - [Redundant Arrays of Inexpensive Disks(RAID) 알아보기](https://icksw.tistory.com/182)
+ >> - [File과 Directory](https://icksw.tistory.com/191)
