@@ -18,23 +18,27 @@ class Solution {
             hashTable[i]! += 1
         }
         
-        var red = hashTable[0]!
-        var white = hashTable[1]!
-        var blue = hashTable[2]!
-    
+//        var red = hashTable[0]!
+//        var white = hashTable[1]!
+//        var blue = hashTable[2]!
+        let red: [Int] = [Int](repeating: 0, count: hashTable[0]!)
+        let white: [Int] = [Int](repeating: 1, count: hashTable[1]!)
+        let blue: [Int] = [Int](repeating: 2, count: hashTable[2]!)
         
-        for i in 0..<nums.count{
-            if red != 0 {
-                nums[i] = 0
-                red -= 1
-            } else if red == 0 && white != 0 {
-                nums[i] = 1
-                white -= 1
-            } else if red == 0 && white == 0 && blue != 0 {
-                nums[i] = 2
-                blue -= 1
-            }
-        }
+        nums = red + white + blue
+        
+//        for i in 0..<nums.count{
+//            if red != 0 {
+//                nums[i] = 0
+//                red -= 1
+//            } else if red == 0 && white != 0 {
+//                nums[i] = 1
+//                white -= 1
+//            } else if red == 0 && white == 0 && blue != 0 {
+//                nums[i] = 2
+//                blue -= 1
+//            }
+//        }
     }
 }
 
