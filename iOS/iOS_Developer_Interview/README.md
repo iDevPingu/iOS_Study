@@ -82,7 +82,7 @@
 > ## AutoLayout
 > ### Q : 오토레이아웃을 코드로 작성하는 방법은 무엇인가? (3가지)
  - [Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/)
- - A : SnapKit 사용하는 방법, 뷰 자체 constraint들에 제약조건을 주는 방법
+ - A : Visual Format Language 를 통한 구현, Anchor를 사용하는 방법, NSLayoutConstraint를 사용하느 방법
 > ### Q : hugging, resistance에 대해서 설명하시오.
 > ### Q : Intrinsic Size에 대해서 설명하시오.
 > ### Q : 스토리보드를 이용했을때의 장단점을 설명하시오.
@@ -90,7 +90,7 @@
 > ### Q : Safearea에 대해서 설명하시오.
  - A : 
 > ### Q : Left Constraint 와 Leading Constraint 의 차이점을 설명하시오.
-
+ - A : 
 > ## Swift
 > ### Q : Optional 이란 무엇인지 설명하시오.
  - A : 값이 있을 수도 없을 수도 있는 값을 처리할 때 사용하는 방법입니다. 만약 값이 없다면 nil이 존재하게 되며 값이 있다면 뭔가의 값이 존재하게 됩니다. 하지만 옵셔널 값을 바로 사용할 수는 없고 값이 있는지 없는지를 확인하는 과정인 wrapping 과정이 필요합니다. 이를 통해 일반적인 값으로 처리되어 사용할 수 있습니다.
@@ -123,8 +123,10 @@
 > ## ARC
 > ### [Automatic Reference Counting 공식문서 정리](https://icksw.tistory.com/80)
 > ### Q : ARC란 무엇인지 설명하시오.
+ - A : 코드 내에서 클래스 인스턴스에 대한 참조 횟수를 세고 이를 통한 메모리 관리를 하는 방법입니다. 참조 횟수가 0이 되면 메모리에서 해제되고 그렇지 않다면 메모리에 계속해서 남아있게 됩니다. 별 다른 설정을 해주지 않으며 강한 참조로 참조하게 되는데, weak이나 unowned 키워드를 사용하여 약한 참조로 만들 수 있습니다. 강한 참조로 만들게 되면 직접 할당 해제를 해줘야 참조 횟수가 줄어들게 되고 이를 제대로 해주지 않으면 메모리 누수가 발생하게 됩니다.
 > ### Q : Retain Count 방식에 대해 설명하시오.
 > ### Q : Strong 과 Weak 참조 방식에 대해 설명하시오.
+ - A : Strong 참조 방식은 별다른 선언 없이 변수를 할당하면 참조 주기가 생성됩니다. Strong 방식으로 참조한다면 직접 할당 해제를 해줘야 참조 카운트가 감소하게 되고 이를 모두 해제해주지 않으면 메모리 누수가 발생합니다. 이를 보완하기 위해 weak 참조가 있는데요, 참조할 때 weak 키워드를 사용하면 사용할 수 있습니다. weak 참조는 참조 카운트를 변화시키지 않기 때문에 이를 사용하면 인스턴스를 참조하고 있더라도 해당 인스턴스는 할당 해제 될 수 있습니다. 이렇게 항상 값이 변경될 수 있기 때문에 weak 참조는 항상 변수에만 사용할 수 있습니다. 
 > ### Q : ARC 대신 Manual Reference Count 방식으로 구현할 때 꼭 사용해야 하는 메서드들을 쓰고 역할을 설명하시오.
 > ### Q : retain 과 assign 의 차이점을 설명하시오.
 > ### Q : 순환 참조에 대하여 설명하시오.
