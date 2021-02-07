@@ -25,26 +25,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
 //        print("Scene Did Disconnect")
-        print("뷰가 완전히 사라집니다")
+        print("Scene과의 연결이 끊깁니다.")
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-//        print("Scene Did Become Active")
+        print("Scene이 Active 상태가 됩니다.")
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
-//        print("Scene Will Resign Active")
+        print("Scene이 Active 상태를 포기합니다.")
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
 //        print("Scene Will Enter Foreground")
-        print("홈화면에서 앱을 실행하여 Foreground 상태가 됨")
+        print("홈화면에서 앱을 실행하여 Foreground 상태가 됨 -> Scene과 앱이 연걸됨")
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
@@ -54,7 +54,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        print("Scene Did Enter Background")
         print("홈 버튼 눌러서 백그라운드로 갔어요")
     }
-
 
 }
 
