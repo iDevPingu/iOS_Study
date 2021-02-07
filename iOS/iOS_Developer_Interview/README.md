@@ -70,6 +70,8 @@
  Background : 
  Suspended : 
 > ### Q : App thinning에 대해서 설명하시오.
+ - [App Thinning Apple Document](https://help.apple.com/xcode/mac/current/#/devbbdc5ce4f)
+ - A :
 > ### Q : Global DispatchQueue 의 Qos 에는 어떤 종류가 있는지, 각각 어떤 의미인지 설명하시오.
  - A : Qos(Quality Of Service)란 작업 실행의 우선순위를 지정합니다. qos를 정의하면 앱이 수행하려는 작업의 의도를 알 수 있고 작업 실행의 우선순위 결정에 영향을 줍니다.
    - UserInteractive : 애니메이션, 이벤트 처리 또는 앱의 사용자 인터페이스 업데이트와 같은 상호 작용 작업을 위한 qos
