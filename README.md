@@ -30,10 +30,10 @@
    - 자신을 하나의 캐릭터 처럼 육성하는 계획 앱
    - ## [앱 스토어 링크](https://apps.apple.com/kr/app/lvup-todo-레벨을-올리는-todo-list/id1537835629)
    
-   라이브러리
-   Realm
-   FSCalendar
-   Firebase
+   - 라이브러리
+    - Realm
+    - FSCalendar
+    - Firebase
    
    Screenshots
    -----------
