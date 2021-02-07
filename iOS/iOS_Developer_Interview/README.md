@@ -95,12 +95,14 @@
  - A : 
 > ## Swift
 > ### Q : Optional 이란 무엇인지 설명하시오.
+ - [The Basic](https://icksw.tistory.com/2)
  - A : 값이 있을 수도 없을 수도 있는 값을 처리할 때 사용하는 방법입니다. 만약 값이 없다면 nil이 존재하게 되며 값이 있다면 뭔가의 값이 존재하게 됩니다. 하지만 옵셔널 값을 바로 사용할 수는 없고 값이 있는지 없는지를 확인하는 과정인 wrapping 과정이 필요합니다. 이를 통해 일반적인 값으로 처리되어 사용할 수 있습니다.
 > ### Q : Fast Enumeration 이란 무엇인지 설명하시오.
 > ### Q : Struct 가 무엇이고 어떻게 사용하는지 설명하시오.
+ - [Struct](https://icksw.tistory.com/11)
  - A : 구조체라고 불리는 Struct는 값 타입의 객체입니다. 
 > ### Q : instance 메서드와 class 메서드의 차이점을 설명하시오.
- - A : instance 메서드를 사용하기 위해선 인스턴스를 먼저 만들고 메서드를 사용할 수 있지만 class 메서드는 타입 메서드의 일종으로 타입 메서드란 타입 자체에서 호출 가능한 메서드 입니다. 이 때 가능한 것으로는 struct, enum, class가 있는데 class만 참조 타입이므로 class라는 키워드로 타입 메서드를 만들 수 있습니다. Struct나 enum의 경우에는 static으로 만들 수 있습니다. 이러한 이뉴는 클래스에는 상속이라는 개념이 존재하여 이러한 메서드도 override 할 수 있게 하기 위해서입니다.
+ - A : instance 메서드를 사용하기 위해선 인스턴스를 먼저 만들고 메서드를 사용할 수 있지만 class 메서드는 타입 메서드의 일종으로 타입 메서드란 타입 자체에서 호출 가능한 메서드 입니다. 이 때 가능한 것으로는 struct, enum, class가 있는데 class만 참조 타입이므로 class라는 키워드로 타입 메서드를 만들 수 있습니다. Struct나 enum의 경우에는 static으로 만들 수 있습니다. 이러한 이유는 클래스에는 상속이라는 개념이 존재하여 이러한 메서드도 override 할 수 있게 하기 위해서입니다.
 > ### Q : Delegate 패턴을 활용하는 경우를 예를 들어 설명하시오.
 > ### Q : Singleton 패턴을 활용하는 경우를 예를 들어 설명하시오.
  - A : 앱 내에서 하나의 객체만 존재하게 만들어서 이를 공유하여 사용하기 좋을 때 사용합니다.
@@ -111,7 +113,9 @@
 > ### Q : 프로토콜이란 무엇인지 설명하시오.
  - [Protocol 공식문서 정리](https://icksw.tistory.com/62)
 > ### Q : Hashable이 무엇이고, Equatable을 왜 상속해야 하는지 설명하시오.
+ - A : 
 > ### Q : mutating 키워드에 대해 설명하시오.
+ - A : enum, struct 안에 정의된 메서드에서 프로퍼티의 값을 변경하고 싶을 때 사용하는 키워드입니다.
 > ### Q : 탈출 클로저에 대하여 설명하시오.
  - [AutoClosure, EscapingClosure 알아보기](https://icksw.tistory.com/157)
 > ### Q : Extension에 대해 설명하시오.
