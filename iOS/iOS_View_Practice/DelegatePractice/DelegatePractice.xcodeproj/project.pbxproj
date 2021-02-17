@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6009C81225DC312C001200C4 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6009C81025DC312C001200C4 /* MyCell.swift */; };
+		6009C81325DC312C001200C4 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6009C81125DC312C001200C4 /* MyCell.xib */; };
 		608E42A225DAD1D30071FE51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E42A125DAD1D30071FE51 /* AppDelegate.swift */; };
 		608E42A425DAD1D30071FE51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E42A325DAD1D30071FE51 /* SceneDelegate.swift */; };
 		608E42A625DAD1D30071FE51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E42A525DAD1D30071FE51 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6009C81025DC312C001200C4 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		6009C81125DC312C001200C4 /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		608E429E25DAD1D30071FE51 /* DelegatePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DelegatePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		608E42A125DAD1D30071FE51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		608E42A325DAD1D30071FE51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				608E42BA25DAD2F30071FE51 /* MyView.swift */,
 				608E42BD25DAD2F80071FE51 /* MyView.xib */,
 				608E42A725DAD1D30071FE51 /* Main.storyboard */,
+				6009C81025DC312C001200C4 /* MyCell.swift */,
+				6009C81125DC312C001200C4 /* MyCell.xib */,
 				608E42AA25DAD1D40071FE51 /* Assets.xcassets */,
 				608E42AC25DAD1D40071FE51 /* LaunchScreen.storyboard */,
 				608E42AF25DAD1D40071FE51 /* Info.plist */,
@@ -134,6 +140,7 @@
 				608E42AE25DAD1D40071FE51 /* LaunchScreen.storyboard in Resources */,
 				608E42AB25DAD1D40071FE51 /* Assets.xcassets in Resources */,
 				608E42A925DAD1D30071FE51 /* Main.storyboard in Resources */,
+				6009C81325DC312C001200C4 /* MyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				608E42BB25DAD2F30071FE51 /* MyView.swift in Sources */,
+				6009C81225DC312C001200C4 /* MyCell.swift in Sources */,
 				608E42A625DAD1D30071FE51 /* ViewController.swift in Sources */,
 				608E42A225DAD1D30071FE51 /* AppDelegate.swift in Sources */,
 				608E42A425DAD1D30071FE51 /* SceneDelegate.swift in Sources */,

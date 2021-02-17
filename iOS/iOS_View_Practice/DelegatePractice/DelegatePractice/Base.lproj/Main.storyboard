@@ -24,16 +24,25 @@
                                     <constraint firstAttribute="width" constant="100" id="5n6-sO-XeI"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rEm-PJ-M1c">
+                                <rect key="frame" x="0.0" y="44" width="414" height="354"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="rEm-PJ-M1c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CMp-gl-koO"/>
                             <constraint firstItem="jAG-Xa-Phr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bte-uv-1kr"/>
                             <constraint firstItem="jAG-Xa-Phr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d7G-U1-auj"/>
+                            <constraint firstItem="rEm-PJ-M1c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fzM-bl-Rrx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rEm-PJ-M1c" secondAttribute="trailing" id="kCr-O8-hvY"/>
+                            <constraint firstItem="jAG-Xa-Phr" firstAttribute="top" secondItem="rEm-PJ-M1c" secondAttribute="bottom" id="z80-xa-BEX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="myView" destination="jAG-Xa-Phr" id="grZ-si-3XK"/>
+                        <outlet property="tableView" destination="rEm-PJ-M1c" id="kqm-3s-l4N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
