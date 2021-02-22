@@ -9,28 +9,21 @@ import Foundation
 
 class Solution {
     func numTrees(_ n: Int) -> Int {
-        // 1 -> 1
-        // 2 -> 2
-        // 3 -> 5
-        // 4 -> 17
-        if n == 1 {
+        if n <= 1 {
             return 1
-        } else if n == 2 {
-            return 2
         }
-        var result: [Int] = [0,1,2]
-        var count: Int = 2
         
-        while count != n {
-            var temp: Int = 0
-            for i in 1..<result.count {
-                temp += result[i] * i
+        var dp: [Int] = [1,1]
+        
+        for i in 2...n {
+            var temp = 0
+            for j in 1...i {
+                temp += dp[j-1] * dp[i-j]
             }
-            result.append(temp)
-            count += 1
+            dp.append(temp)
         }
-        print(result)
-        return result[n]
+        
+        return dp[n]
     }
 }
 

@@ -34,23 +34,12 @@ class Solution {
         if root == nil {
             return []
         }
-        var result: [Int] = []
         
-        func makeInorder(_ rootNode: TreeNode?) -> [Int] {
-            if rootNode == nil {
-                return []
-            }
-            
-            let leftTree = makeInorder(rootNode?.left)
-            let rootTree = [rootNode!.val]
-            let rightTree = makeInorder(rootNode?.right)
-            
-            return leftTree + rootTree + rightTree
-        }
+        let leftTree = inorderTraversal(root?.left)
+        let rootNode = [root!.val]
+        let rightTree = inorderTraversal(root?.right)
         
-        result = makeInorder(root)
-        
-        return result
+        return leftTree + rootNode + rightTree
     }
 }
 

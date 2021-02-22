@@ -31,51 +31,30 @@ public class TreeNode {
 
 class Solution {
     func isValidBST(_ root: TreeNode?) -> Bool {
+        var result: Bool = true
         
-        func checkNode(_ nowNode: TreeNode?) -> Bool {
-            var result: Bool = false
-            guard let nowVal = nowNode?.val else { return true }
-            
-            if nowNode?.left == nil && nowNode?.right == nil {
-                return true
+        func checkNode(_ root: TreeNode?) {
+            if root == nil {
+                return
             }
-            
-            guard let leftVal = nowNode?.left?.val else {
-                guard let rightVal = nowNode?.right?.val else {
-                    return true
-                }
-                if nowVal >= rightVal {
-                    return false
-                } else {
-                    return true
+            if let left = root?.left {
+                if left.val > root!.val {
+                    result = false
+                    return
                 }
             }
-            
-            if nowVal <= leftVal {
-                return false
-            }
-            
-            guard let rightVal = nowNode?.right?.val else {
-                guard let leftVal = nowNode?.left?.val else {
-                    return true
-                }
-                if nowVal <= leftVal {
-                    return false
-                } else {
-                    return true
+            checkNode(root?.left)
+            if let right = root?.right {
+                if right.val < root!.val {
+                    result = false
+                    return
                 }
             }
+            checkNode(root?.right)
             
-            if nowVal >= rightVal {
-                return false
-            }
-            
-            result = checkNode(nowNode?.left) && checkNode(nowNode?.right)
-            
-            return result
         }
         
-        let result = checkNode(root)
+        checkNode(root)
         
         return result
     }
