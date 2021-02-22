@@ -37,3 +37,5 @@
  >> - [Hard Disk Drive 알아보기](https://icksw.tistory.com/177)
  >> - [Redundant Arrays of Inexpensive Disks(RAID) 알아보기](https://icksw.tistory.com/182)
  >> - [File과 Directory](https://icksw.tistory.com/191)
+ >> - [간단한 File System 구현 방법](https://icksw.tistory.com/195)
+ >> - [Fast File System의 File System 성능향상 아이디어](https://icksw.tistory.com/202)
