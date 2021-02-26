@@ -30,13 +30,12 @@ public class TreeNode {
 
 class Solution {
     func buildTree(_ preorder: [Int], _ inorder: [Int]) -> TreeNode? {
-        if preorder.count == 0 {
-            return nil
-        } else if preorder.count < 2 {
+        if preorder.count < 2 {
             return TreeNode(preorder[0])
         }
         
         var preIndex: Int = 0
+        
         func makeTreeNodes(nowRoot: TreeNode?, inorder: [Int]) -> TreeNode? {
             if preIndex >= preorder.count {
                 return nil
@@ -44,10 +43,12 @@ class Solution {
             if inorder.count == 0 {
                 return nil
             }
+            // 현재 루트의 값을 전위 순회에서 가져옵니다.
             nowRoot?.val = preorder[preIndex]
             var left: [Int] = []
             var right: [Int] = []
             
+            // 현재 루트의 값을 중위 순회에서 찾습니다.
             for i in 0..<inorder.count {
                 if preorder[preIndex] == inorder[i] {
                     left = Array(inorder[0..<i])
@@ -57,7 +58,9 @@ class Solution {
             }
             preIndex += 1
             
+            // 현재 루트 노드의 왼쪽 부분에 대하여 다시 반복합니다.
             nowRoot?.left = makeTreeNodes(nowRoot: TreeNode(), inorder: left)
+            // 현재 루트 노드의 오른쪽 부분에 대하여 다시 반복합니다.
             nowRoot?.right = makeTreeNodes(nowRoot: TreeNode(), inorder: right)
             
             return nowRoot

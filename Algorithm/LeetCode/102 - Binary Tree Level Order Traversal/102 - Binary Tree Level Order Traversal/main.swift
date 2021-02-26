@@ -39,11 +39,16 @@ class Solution {
                 return
             }
             guard let val = node?.val else { return }
+            
+            // 현재 레벨에 해당하는 배열이 아직 없다면 지금 노드가
+            // 해당 레벨의 가장 왼쪽 노드이므로 새로운 배열 행성
             if level == result.count {
                 result.append([val])
+                // 현재 레벨에 해당하는 배열이 있다면 거기에 바로 추가
             } else {
                 result[level].append(val)
             }
+            // 왼쪽, 오른쪽을 나눠서 재귀함수 수행
             checkLevel(level: level + 1, node: node?.left)
             checkLevel(level: level + 1, node: node?.right)
         }
