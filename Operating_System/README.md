@@ -39,3 +39,5 @@
  >> - [File과 Directory](https://icksw.tistory.com/191)
  >> - [간단한 File System 구현 방법](https://icksw.tistory.com/195)
  >> - [Fast File System의 File System 성능향상 아이디어](https://icksw.tistory.com/202)
+ >> - [파일시스템의 consistency(일관성)를 위한 FSCK, Journaling - OS 공부 30](https://icksw.tistory.com/205)
+ >> - [Log-structed File System 알아보기 - OS 공부 31](https://icksw.tistory.com/208)
