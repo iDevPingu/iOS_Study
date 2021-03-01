@@ -31,32 +31,18 @@ public class TreeNode {
 
 class Solution {
     func isValidBST(_ root: TreeNode?) -> Bool {
-        var result: Bool = true
         
-        func checkNode(_ root: TreeNode?) {
+        func checkNode(_ root: TreeNode?, min: Int, max: Int) -> Bool {
             if root == nil {
-                return
+                return true
             }
-            if let left = root?.left {
-                if left.val > root!.val {
-                    result = false
-                    return
-                }
+            if root!.val <= min || root!.val >= max {
+                return false
             }
-            checkNode(root?.left)
-            if let right = root?.right {
-                if right.val < root!.val {
-                    result = false
-                    return
-                }
-            }
-            checkNode(root?.right)
-            
+            return checkNode(root?.left, min: min, max: root!.val) && checkNode(root?.right, min: root!.val, max: max)
         }
-        
-        checkNode(root)
-        
-        return result
+   
+        return checkNode(root, min: Int.min, max: Int.max)
     }
 }
 

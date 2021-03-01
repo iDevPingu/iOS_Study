@@ -14,6 +14,8 @@ class Solution {
         let input = s.map({String($0)})
         var left: Int = 0
         var right: Int = 0
+        
+        // [i][j]가 true라면 s의 i번째 글자부터 j번째 글자까지는 회문이다! 라는 뜻입니다.
         var isPalindrome = [[Bool]](repeating: [Bool](repeating: false, count: s.count), count: s.count)
         
         // i == right, j == left

@@ -41,12 +41,25 @@ import Foundation
 
 class Solution {
     func findTargetSumWays(_ nums: [Int], _ S: Int) -> Int {
-        var dp: [Int] = []
+        var result: Int = 0
         
-        return 0
+        func dfs(_ index: Int, _ sum: Int) {
+            if index == nums.count {
+                if sum == S {
+                    result += 1
+                }
+                return
+            }
+            dfs(index+1, sum + nums[index])
+            dfs(index+1, sum - nums[index])
+            
+        }
+        
+        dfs(0,0)
+        
+        return result
     }
 }
-
 
 let a = Solution()
 print(a.findTargetSumWays([1,1,1,1,1], 3))
