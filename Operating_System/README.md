@@ -41,3 +41,4 @@
  >> - [Fast File System의 File System 성능향상 아이디어](https://icksw.tistory.com/202)
  >> - [파일시스템의 consistency(일관성)를 위한 FSCK, Journaling](https://icksw.tistory.com/205)
  >> - [Log-structed File System 알아보기](https://icksw.tistory.com/208)
+ >> - [Flash 기반 SSD의 구조](https://icksw.tistory.com/211)
