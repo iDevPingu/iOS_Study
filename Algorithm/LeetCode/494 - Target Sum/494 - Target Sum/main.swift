@@ -42,7 +42,7 @@ import Foundation
 class Solution {
     func findTargetSumWays(_ nums: [Int], _ S: Int) -> Int {
         var result: Int = 0
-        
+        var hashMap: [String: Int] = [:]
         func dfs(_ index: Int, _ sum: Int) {
             if index == nums.count {
                 if sum == S {
@@ -55,7 +55,27 @@ class Solution {
             
         }
         
-        dfs(0,0)
+        func divideAndConquer(_ index: Int, _ sum: Int, _ now: [Int]) -> Int {
+            let key = "\(index)->\(sum)"
+            if let value = hashMap[key] {
+                return value
+            }
+            if index == nums.count {
+                if sum == S {
+                    return 1
+                } else {
+                    return 0
+                }
+            }
+            let add = divideAndConquer(index + 1, sum + nums[index], now + [nums[index]])
+            let minus = divideAndConquer(index + 1, sum - nums[index], now + [-nums[index]])
+            let temp = add + minus
+            
+            hashMap[key] = temp
+            return temp
+        }
+        
+        result = divideAndConquer(0, 0, [])
         
         return result
     }

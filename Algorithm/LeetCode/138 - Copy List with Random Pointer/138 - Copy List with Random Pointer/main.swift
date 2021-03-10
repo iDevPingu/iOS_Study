@@ -17,22 +17,38 @@ public class Node {
         self.random = nil
     }
 }
+extension Node: Equatable {
+    public static func == (_ lhs: Node, _ rhs: Node) -> Bool {
+        return lhs.val == rhs.val
+    }
+}
 
+extension Node: Hashable {
+    public var hashValue: Int {
+        return val
+    }
+}
 class Solution {
     func copyRandomList(_ head: Node?) -> Node? {
-        if head == nil {
-            return nil
+        if head == nil { return nil }
+        var map: [Node : Node] = [:]
+        var old = head
+        var current:Node? = Node(0)
+        while (old != nil) {
+            current?.val = old!.val
+            map[old!] = current
+            if (old?.random != nil) {
+                current?.random = map[old!.random!] ?? Node (old!.random!.val)
+                map[old!.random!] = current?.random
+            }
+            old = old?.next
+            if (old != nil) {
+                current?.next = map[old!] ?? Node(0)
+                current = current?.next
+            }
+            
         }
-        if head?.random == nil {
-            return nil
-        }
-        let result = Node(head!.val)
-        let random = Node(head!.random!.val)
-        result.random = random
-        
-        result = copyRandomList(head?.next)
-        
-        return result
+        return map[head!]
     }
 }
 let node7 = Node(7)

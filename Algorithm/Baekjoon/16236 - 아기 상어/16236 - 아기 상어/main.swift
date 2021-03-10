@@ -33,6 +33,10 @@ class Queue<T>{
         }
         return dequeue.popLast()
     }
+    func removeAll() {
+        dequeue = []
+        enqueue = []
+    }
 }
 
 class Shark {
@@ -54,7 +58,7 @@ func solution() {
     let n = Int(readLine()!)!
     var water: [[Int]] = []
     var findShark: Bool = false
-    var sharkSize: Int = 2
+//    var sharkSize: Int = 2
     var shark: Shark?
     for i in 0..<n {
         let info = readLine()!.split(separator: " ").map({Int(String($0))!})
@@ -69,45 +73,85 @@ func solution() {
         water.append(info)
     }
     
-    // 상하좌우
+    // 가장 위에 있는 물고기 혹은 가장 왼쪽에 있는 물고기를 먼저 먹어야 하므로
     // 상좌우하
     let dx: [Int] = [0,-1,1,0]
     let dy: [Int] = [-1,0,0,1]
     
-    var time: Int = 0
-    // 지금까지 먹은 물고기 수
-    var eating: Int = 0
-    let queue = Queue([Shark]())
-    queue.push(shark!)
+    let queue = Queue([[shark!.x, shark!.y]])
+    var visited: [[Bool]] = [[Bool]](repeating: [Bool](repeating: false, count: n), count: n)
+    var canEatNow: [[Int]] = []
     
-    while !queue.isEmpty {
-        let now = queue.pop()!
-        
-        for i in 0..<4{
-            let nx = now.x + dx[i]
-            let ny = now.y + dy[i]
-            
-            if nx < 0 || ny < 0 || nx > n-1 || ny > n-1 {
-                continue
-            } else {
-                if water[ny][nx] == sharkSize {
-                    queue.push(Shark(x: nx, y: ny, size: now.size, eating: now.eating, time: now.time + 1))
-                } else if water[ny][nx] < sharkSize {
-                    water[ny][nx] = 0
-                    eating += 1
-                    if eating == sharkSize {
-                        sharkSize += 1
-                        eating = 0
+    func bfs() {
+        while !queue.isEmpty {
+            let now = queue.pop()!
+            for i in 0..<dx.count {
+                let newX = now[0] + dx[i]
+                let newY = now[1] + dy[i]
+                if newX < 0 || newY < 0 || newX >= water.count || newY >= water.count {
+                    continue
+                } else {
+                    // 이미 방문한곳이거나 물고기가 상어보다 큰 경우엔 넘어간다
+                    if visited[newY][newX] || water[newY][newX] > shark!.size {
+                        continue
+                    } else {
+                        // 이미 물고기가 없거나 크기가 같아서 지나갈 수만 있을 때
+                        if water[newY][newX] == 0 || water[newY][newX] == shark!.size {
+                            
+                        } else {
+                            // 물고기가 상어보다 작다? -> 먹을 수 있는 경우의수에 추가!
+                            canEatNow.append([newX, newY])
+                        }
+                        visited[newY][newX] = true
+                        queue.push([newX, newY])
                     }
-                    queue.push([ny,nx,now[2]+1])
                 }
             }
         }
     }
-    print(sharkSize)
     
-    
-    
+    while true {
+        bfs()
+        
+        if canEatNow.isEmpty {
+            break
+        } else {
+            canEatNow.sort { (fish1, fish2) -> Bool in
+                return fish1[2] < fish2[2]
+            }
+            let distance = canEatNow[0][2]
+            canEatNow = canEatNow.filter { (fish) -> Bool in
+                return fish[2] == distance
+            }
+            
+            canEatNow.sort { (fish1, fish2) -> Bool in
+                return fish1[1] < fish1[2]
+            }
+            let minY = canEatNow[0][1]
+            canEatNow = canEatNow.filter({ (fish) -> Bool in
+                return fish[1] == minY
+            })
+            canEatNow.sort { (fish1, fish2) -> Bool in
+                return fish1[0] < fish2[0]
+            }
+            let fish = canEatNow[0]
+            water[shark!.y][shark!.x] = 0
+            water[fish[1]][fish[0]] = 9
+            shark!.x = fish[0]
+            shark!.y = fish[1]
+            shark!.time += fish[2]
+            shark!.eating += 1
+            
+            if shark!.eating == shark!.size {
+                shark!.size += 1
+                shark!.eating = 0
+            }
+            canEatNow = []
+            visited = [[Bool]](repeating: [Bool](repeating: false, count: n), count: n)
+            queue.push([shark!.x, shark!.y])
+        }
+    }
+    print(shark!.time)
 }
 
 solution()
