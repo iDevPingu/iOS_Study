@@ -25,32 +25,36 @@ class Solution {
 //        return result
 //    }
     func findAnagrams(_ s: String, _ p: String) -> [Int] {
-        if s.count < p.count {
+        let sLen = s.count
+        let pLen = p.count
+        if sLen < pLen {
             return []
         }
+        var map = [Int](repeating: 0, count: 26)
+        p.utf8.forEach({ map[Int($0) - 97] += 1})
         
-        var dictP = [Character: Int]()
-        var dictS = [Character: Int]()
+        var left = 0
+        var right = 0
+        var count = 0
         
-        var result: [Int] = []
-        
-        let s = Array(s)
-        
-        for char in p {
-            dictP[char, default: 0] += 1
-        }
-        
-        for i in 0..<s.count {
-            if i >= p.count {
-                let char = s[i - p.count]
-                dictS[char] = dictS[char]! > 1 ? dictS[char]! - 1 : nil
+        var result = [Int]()
+        let sValues = Array(s.utf8)
+        while right < sLen {
+            let rightIndex = Int(sValues[right]) - 97
+            if map[rightIndex] > 0 {
+                map[rightIndex] -= 1
+                count += 1
+                right += 1
+            } else {
+                let leftIndex = Int(sValues[left]) - 97
+                map[leftIndex] += 1
+                count -= 1
+                left += 1
             }
-            dictS[s[i], default: 0] += 1
-            if dictS == dictP {
-                result.append(i - p.count + 1)
+            if count == pLen {
+                result.append(left)
             }
         }
-        
         return result
     }
 }
