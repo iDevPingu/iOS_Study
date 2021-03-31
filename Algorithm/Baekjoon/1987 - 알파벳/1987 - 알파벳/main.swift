@@ -58,58 +58,100 @@ import Foundation
 //    print(result)
 //}
 
+//func solution() {
+//    let firstLine = readLine()!.split(separator: " ").map({Int($0)!})
+//    let r = firstLine[0]
+//    let c = firstLine[1]
+//
+//    var board: [[String]] = []
+//
+//    for _ in 0..<r {
+//        board.append(readLine()!.map({String($0)}))
+//    }
+//
+//    let dx = [-1,1,0,0]
+//    let dy = [0,0,-1,1]
+//
+//    var count: [Int] = [Int](repeating: 0, count: 26)
+//    var visited: [Bool] = [Bool](repeating: false, count: 26)
+//
+//    var stack: [[Int]] = [[0,0]]
+//    count[Int(UnicodeScalar(board[0][0])!.value) - 65] = 1
+//
+//    func dfs(_ x: Int, _ y: Int) {
+//        for i in 0..<4 {
+//            let nx = x + dx[i]
+//            let ny = y + dy[i]
+//
+//            if nx < 0 || ny < 0 || nx > c-1 || ny > r-1 {
+//                continue
+//            } else {
+//                if !visited[Int(UnicodeScalar(board[ny][nx])!.value - 65)] {
+//                    visited[Int(UnicodeScalar(board[ny][nx])!.value - 65)] = true
+//                    if count[Int(UnicodeScalar(board[ny][nx])!.value - 65)] < count[Int(UnicodeScalar(board[y][x])!.value - 65)] + 1 {
+//                        count[Int(UnicodeScalar(board[ny][nx])!.value - 65)] = count[Int(UnicodeScalar(board[y][x])!.value - 65)] + 1
+//                        dfs(nx,ny)
+//                    }
+//                    visited[Int(UnicodeScalar(board[ny][nx])!.value - 65)] = false
+//                }
+//            }
+//        }
+//    }
+//
+//    for i in 0..<r {
+//        for j in 0..<c {
+//            if !visited[Int(UnicodeScalar(board[i][j])!.value) - 65] {
+//                visited[Int(UnicodeScalar(board[i][j])!.value) - 65] = true
+//                count[Int(UnicodeScalar(board[i][j])!.value) - 65] += 1
+//                dfs(j,i)
+//            }
+//            visited[Int(UnicodeScalar(board[i][j])!.value) - 65] = false
+//        }
+//    }
+//
+//    print(count)
+//
+//}
 func solution() {
-    let firstLine = readLine()!.split(separator: " ").map({Int($0)!})
-    let r = firstLine[0]
-    let c = firstLine[1]
+    let firstLine = readLine()!.split(separator: " ").map({Int(String($0))!})
+    let r = firstLine[0], c = firstLine[1]
     
     var board: [[String]] = []
-    
+
     for _ in 0..<r {
         board.append(readLine()!.map({String($0)}))
     }
-    
+
     let dx = [-1,1,0,0]
     let dy = [0,0,-1,1]
     
-    var count: [Int] = [Int](repeating: 0, count: 26)
     var visited: [Bool] = [Bool](repeating: false, count: 26)
-    
-    var stack: [[Int]] = [[0,0]]
-    count[Int(UnicodeScalar(board[0][0])!.value) - 65] = 1
-    
+    var count: Int = 1
+    var result: Int = 0
     func dfs(_ x: Int, _ y: Int) {
+        let index = Int(UnicodeScalar(board[y][x])!.value) - 65
+        visited[index] = true
+        
         for i in 0..<4 {
-            let nx = x + dx[i]
-            let ny = y + dy[i]
-            
-            if nx < 0 || ny < 0 || nx > c-1 || ny > r-1 {
+            let newX = x + dx[i]
+            let newY = y + dy[i]
+            if newX < 0 || newY < 0 || newX >= c || newY >= r {
                 continue
             } else {
-                if !visited[Int(UnicodeScalar(board[ny][nx])!.value - 65)] {
-                    visited[Int(UnicodeScalar(board[ny][nx])!.value - 65)] = true
-                    if count[Int(UnicodeScalar(board[ny][nx])!.value - 65)] < count[Int(UnicodeScalar(board[y][x])!.value - 65)] + 1 {
-                        count[Int(UnicodeScalar(board[ny][nx])!.value - 65)] = count[Int(UnicodeScalar(board[y][x])!.value - 65)] + 1
-                        dfs(nx,ny)
-                    }
-                    visited[Int(UnicodeScalar(board[ny][nx])!.value - 65)] = false
+                let nextIndex = Int(UnicodeScalar(board[newY][newX])!.value) - 65
+                if !visited[nextIndex] {
+                    count += 1
+                    result = max(count, result)
+                    dfs(newX,newY)
                 }
             }
         }
+        
+        count -= 1
+        visited[index] = false
     }
     
-    for i in 0..<r {
-        for j in 0..<c {
-            if !visited[Int(UnicodeScalar(board[i][j])!.value) - 65] {
-                visited[Int(UnicodeScalar(board[i][j])!.value) - 65] = true
-                count[Int(UnicodeScalar(board[i][j])!.value) - 65] += 1
-                dfs(j,i)
-            }
-            visited[Int(UnicodeScalar(board[i][j])!.value) - 65] = false
-        }
-    }
-    
-    print(count)
-
+    dfs(0,0)
+    print(result)
 }
 solution()
