@@ -36,7 +36,7 @@
    Screenshots
    -----------
   <div>
- <img width = "1000" src="https://user-images.githubusercontent.com/43135067/97694374-cd5a1d00-1ae5-11eb-81dd-81d4bf567116.png">
+ <img width = "1000" src="https://user-images.githubusercontent.com/43135067/113486780-58a16980-94ef-11eb-9700-6d974e6a3fc3.png">
  </div>
  
 
