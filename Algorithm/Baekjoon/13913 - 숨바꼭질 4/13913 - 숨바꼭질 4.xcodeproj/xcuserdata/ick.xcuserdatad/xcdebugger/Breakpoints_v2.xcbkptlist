@@ -3,22 +3,4 @@
    uuid = "D3BF1FFC-8220-4B39-93D0-229C52176F4C"
    type = "1"
    version = "2.0">
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C1F912BC-5FC5-4280-8993-FF922EC11D77"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "13913 - &#x1109;&#x116e;&#x11b7;&#x1107;&#x1161;&#x1101;&#x1169;&#x11a8;&#x110c;&#x1175;&#x11af; 4/main.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "solution()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
 </Bucket>
