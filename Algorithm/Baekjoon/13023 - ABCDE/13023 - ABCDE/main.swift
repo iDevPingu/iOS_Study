@@ -10,7 +10,10 @@ import Foundation
 func solution() {
     let firstLine = readLine()!.split(separator: " ").map({Int(String($0))!})
     let n = firstLine[0], m = firstLine[1]
+    
+    // 친구 관계 그래프
     var friendGraph: [[Int]] = [[Int]](repeating: [], count: n)
+    
     var isAvailable: Bool = false
     for _ in 0..<m {
         let friend = readLine()!.split(separator: " ").map({Int(String($0))!})
@@ -18,7 +21,7 @@ func solution() {
         friendGraph[friend[1]].append(friend[0])
     }
     
-    var visited: [Bool] = [Bool](repeating: false, count: n)
+    var checked: [Bool] = [Bool](repeating: false, count: n)
     
     func dfs(_ now: Int, level: Int) {
         if isAvailable {
@@ -28,19 +31,19 @@ func solution() {
             isAvailable = true
             return
         }
-        visited[now] = true
+        checked[now] = true
         for i in 0..<friendGraph[now].count {
             let friend = friendGraph[now][i]
-            if !visited[friend] {
-                visited[friend] = true
+            if !checked[friend] {
+                checked[friend] = true
                 dfs(friend, level: level + 1)
                 if isAvailable {
                     return
                 }
-                visited[friend] = false
+                checked[friend] = false
             }
         }
-        visited[now] = false
+        checked[now] = false
     }
     
     for i in 0..<n {
