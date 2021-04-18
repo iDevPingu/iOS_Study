@@ -1,7 +1,7 @@
 # iOS
 > ## [배민스크롤 따라하기](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_CustomView/BaeMinScroll)
  - 배달의 민족 스크롤에 따른 메뉴추첨 뷰
- <image width = "576" src = "https://user-images.githubusercontent.com/43135067/115137148-40892880-a05f-11eb-8a1a-0f0b87ab1c37.gif">
+ <image width = "216" src = "https://user-images.githubusercontent.com/43135067/115137148-40892880-a05f-11eb-8a1a-0f0b87ab1c37.gif">
 
 
 > ## UITableView
