@@ -9,6 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var menuList: [UIImage] = [UIImage(named: "Pingu.jpeg")!,
+                               UIImage(named: "Swift.png")!,
+                               UIImage(named: "Xcode.png")!,
+                               UIImage(named: "SwiftUI.png")!
+                               ]
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var menuImageView: UIImageView!
@@ -25,8 +30,11 @@ class ViewController: UIViewController {
         self.collectionView.register(UINib(nibName: TempCell.nibName, bundle: nil), forCellWithReuseIdentifier: TempCell.identifier)
         self.reloadMenuView()
     }
-    
+    @IBOutlet weak var topImageView: NSLayoutConstraint!
+    var indexIncreasing: Bool = false
+    var index = 0
     func reloadMenuView() {
+        
         let contentOffset = self.collectionView.contentOffset
         let contentOffsetY = contentOffset.y > 0 ? 0 : contentOffset.y
         let height = contentOffset.y > 0 ? 0 : -contentOffset.y
@@ -37,15 +45,17 @@ class ViewController: UIViewController {
         let frame = CGRect(x: 0, y: contentOffsetY, width: self.collectionView.bounds.width, height: height)
         self.menuView.frame = frame
         
-        if Int(contentOffsetY) % 20 == 0 {
-            self.menuImageView.image = UIImage(named: "Pingu.jpeg")
-        } else if Int(contentOffsetY) % 4 == -1 {
-            self.menuImageView.image = UIImage(named: "Swift.png")
-        } else if Int(contentOffsetY) % 4 == -2 {
-            self.menuImageView.image = UIImage(named: "Xcode.png")
-        } else if Int(contentOffsetY) % 4 == -3 {
-            self.menuImageView.image = UIImage(named: "SwiftUI.png")
+        let imageOffset = CGFloat(Int(-contentOffsetY) % 70)
+        print(imageOffset)
+        if imageOffset >= 0 && imageOffset < 5 && !indexIncreasing {
+            self.menuImageView.image = self.menuList[self.index % 4]
+            self.index += 1
+            self.indexIncreasing = true
+        } else if imageOffset >= 5 {
+            self.indexIncreasing = false
         }
+        self.topImageView.constant = imageOffset
+        self.menuImageView.alpha = 1 - (imageOffset/100)
     }
 }
 
@@ -76,14 +86,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 extension ViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        reloadMenuView()
-//        if scrollView.contentOffset.y < 0 {
-//            print(scrollView.contentOffset)
-//            bottomMenuView.constant = -scrollView.contentOffset.y
-//        } else {
-//            bottomMenuView.constant = 0
-//        }
+        self.reloadMenuView()
     }
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         print("END")
@@ -92,10 +95,11 @@ extension ViewController: UIScrollViewDelegate {
         self.collectionView.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 0, right: 0)
         self.menuView.frame = frame
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             UIView.animate(withDuration: 0.5) {
                 self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
                 self.menuView.frame = CGRect(x: 0, y: 0, width: self.collectionView.frame.width, height: 0)
+                self.menuImageView.alpha = 1
                 self.view.layoutIfNeeded()
             }
         }

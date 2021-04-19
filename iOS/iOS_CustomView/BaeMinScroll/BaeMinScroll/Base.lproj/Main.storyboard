@@ -39,19 +39,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8E-Sg-KN3">
-                                        <rect key="frame" x="189.5" y="25.5" width="35" height="35"/>
+                                        <rect key="frame" x="189.5" y="8" width="35" height="70"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kaa-sH-lGr">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pingu.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="kaa-sH-lGr">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="Jbx-oD-36y"/>
+                                                </constraints>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="kaa-sH-lGr" firstAttribute="top" secondItem="X8E-Sg-KN3" secondAttribute="top" id="00v-1O-mqk"/>
                                             <constraint firstAttribute="trailing" secondItem="kaa-sH-lGr" secondAttribute="trailing" id="MCz-6k-jZX"/>
-                                            <constraint firstAttribute="bottom" secondItem="kaa-sH-lGr" secondAttribute="bottom" id="WbM-et-Su2"/>
                                             <constraint firstAttribute="width" constant="35" id="clF-7z-KHB"/>
-                                            <constraint firstAttribute="height" constant="35" id="wjy-Am-7jm"/>
+                                            <constraint firstItem="kaa-sH-lGr" firstAttribute="top" secondItem="X8E-Sg-KN3" secondAttribute="top" id="iWa-V4-HVx"/>
+                                            <constraint firstAttribute="height" constant="70" id="wjy-Am-7jm"/>
                                             <constraint firstItem="kaa-sH-lGr" firstAttribute="leading" secondItem="X8E-Sg-KN3" secondAttribute="leading" id="x09-OU-0Ni"/>
                                         </constraints>
                                     </view>
@@ -59,10 +61,10 @@
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="GfQ-w8-spv" secondAttribute="bottom" id="2mS-gn-brb"/>
+                                    <constraint firstItem="X8E-Sg-KN3" firstAttribute="centerY" secondItem="3NQ-C3-N1q" secondAttribute="centerY" id="C77-VR-zw5"/>
                                     <constraint firstItem="GfQ-w8-spv" firstAttribute="leading" secondItem="3NQ-C3-N1q" secondAttribute="leading" id="QeN-Ku-rHa"/>
                                     <constraint firstAttribute="trailing" secondItem="GfQ-w8-spv" secondAttribute="trailing" id="cmu-2z-EeH"/>
                                     <constraint firstItem="X8E-Sg-KN3" firstAttribute="centerX" secondItem="3NQ-C3-N1q" secondAttribute="centerX" id="jAZ-6c-04Y"/>
-                                    <constraint firstItem="X8E-Sg-KN3" firstAttribute="centerY" secondItem="3NQ-C3-N1q" secondAttribute="centerY" id="jqU-Y4-QlI"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -80,6 +82,7 @@
                         <outlet property="label" destination="GfQ-w8-spv" id="gmb-WL-z8J"/>
                         <outlet property="menuImageView" destination="kaa-sH-lGr" id="6jc-dj-UoB"/>
                         <outlet property="menuView" destination="3NQ-C3-N1q" id="fmz-2Y-pBg"/>
+                        <outlet property="topImageView" destination="iWa-V4-HVx" id="XSH-xf-tzC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -88,6 +91,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Pingu.jpeg" width="206" height="206"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

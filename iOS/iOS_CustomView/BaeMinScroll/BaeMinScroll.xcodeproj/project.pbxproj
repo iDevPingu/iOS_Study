@@ -49,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		600F9853262C2C5500C78D55 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				608CE2C3262BE798006E2DE5 /* Pingu.jpeg */,
+				608CE2C2262BE798006E2DE5 /* Swift.png */,
+				608CE2C9262BE7CB006E2DE5 /* Xcode.png */,
+				608CE2C4262BE798006E2DE5 /* SwiftUI.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		60795BC4262B2EFD007712E9 = {
 			isa = PBXGroup;
 			children = (
@@ -68,15 +79,12 @@
 		60795BCF262B2EFD007712E9 /* BaeMinScroll */ = {
 			isa = PBXGroup;
 			children = (
+				600F9853262C2C5500C78D55 /* Images */,
 				60795BD0262B2EFD007712E9 /* AppDelegate.swift */,
 				60795BD2262B2EFD007712E9 /* SceneDelegate.swift */,
 				60795BD4262B2EFD007712E9 /* ViewController.swift */,
 				60795BE5262B3254007712E9 /* TempCell.swift */,
 				60795BE6262B3254007712E9 /* TempCell.xib */,
-				608CE2C3262BE798006E2DE5 /* Pingu.jpeg */,
-				608CE2C2262BE798006E2DE5 /* Swift.png */,
-				608CE2C9262BE7CB006E2DE5 /* Xcode.png */,
-				608CE2C4262BE798006E2DE5 /* SwiftUI.png */,
 				60795BD6262B2EFD007712E9 /* Main.storyboard */,
 				60795BD9262B2EFE007712E9 /* Assets.xcassets */,
 				60795BDB262B2EFE007712E9 /* LaunchScreen.storyboard */,
