@@ -3,4 +3,22 @@
    uuid = "53598ABC-2D9A-4FFF-A300-8D7E6DA0D72E"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "60669B4F-0FDE-4E95-A6E7-C676CDBD2583"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "[Kakao] 2020 Intern - &#x1107;&#x1169;&#x1109;&#x1165;&#x11a8; &#x1109;&#x116d;&#x1111;&#x1175;&#x11bc;/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "solution(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
