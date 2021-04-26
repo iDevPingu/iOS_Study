@@ -15,7 +15,23 @@ func solution() {
         graph.append(readLine()!.split(separator: " ").map({Int(String($0))!}))
     }
     
-    var result: [[Int]] = [[Int]](repeating: [Int](repeating: 0, count: n), count: n)
+    for i in 0..<n {
+        for j in 0..<n {
+            for k in 0..<n {
+                if graph[j][i] == 1 && graph[i][k] == 1 {
+                    graph[j][k] = 1
+                }
+            }
+        }
+    }
+    
+    for i in 0..<n {
+        var str = ""
+        for j in 0..<n {
+            str += "\(graph[i][j]) "
+        }
+        print(str)
+    }
     
 }
 
