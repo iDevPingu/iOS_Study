@@ -7,17 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B9878DDD-FBB0-4A8F-A923-30F6697669D8"
+            uuid = "3554D2C2-E0FB-48D9-A0CB-9B7E3DE5BED0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "[Kakao] 2020 Blind - &#x1100;&#x1161;&#x1109;&#x1161; &#x1100;&#x1165;&#x11b7;&#x1109;&#x1162;&#x11a8;/main.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "solution(_:_:)"
-            landmarkType = "9">
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "_insert(characters:i:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
