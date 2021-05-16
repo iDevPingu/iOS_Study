@@ -40,7 +40,6 @@
    - 라이브러리
      - Realm
      - FSCalendar
-     - Firebase
    
    Screenshots
    -----------
