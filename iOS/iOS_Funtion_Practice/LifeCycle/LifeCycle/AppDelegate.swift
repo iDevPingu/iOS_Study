@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("준비가 곧 끝남")
         return true
     }
-//    func applicationWillTerminate(_ application: UIApplication) {
-//        print("앱이 곧 종료됩니다")
-//    }
+    func applicationWillTerminate(_ application: UIApplication) {
+        print("앱이 곧 종료됩니다")
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         print("앱이 active 상태를 포기합니다")
     }
