@@ -11,7 +11,7 @@
  - 코딩 스터디 Git
 
 # [Disign Pattern](https://github.com/jaicoco/Swift_Design_Pattern_Study)
- - Swift 디자인 패턴 공부
+ - Swift로 구현해 보며 공부한 디자인 패턴
 
 # [iOS](https://github.com/jaicoco/iOS_Study/tree/master/iOS)
  > ### [SwiftUI Git](https://github.com/jaicoco/SwiftUI)
