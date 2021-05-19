@@ -13,10 +13,19 @@
  - [Foreground, Background 알아보기](https://icksw.tistory.com/178)
  - A : 앱이 백그라운드 상태가 되면 시스템은 시간 할당을 해주지 않고 특수한 상황에만 시간할당을 해줍니다. 블루투스 통신, 사용자 위치 정보, 서버 업데이트, Voice over IP(음성 인터넷 프로토콜), Apple Push Notification, AirPlay, Picture in Picture 비디오를 사용한 오디오 통신, 외부 악세서리 통신의 경우에만 시스템은 백그라운드 앱에 시간을 할당해줍니다.
 > ### Q : 상태 변화에 따라 다른 동작을 처리하기 위한 앱델리게이트 메서드들을 설명하시오.
+ - A : [App LifeCycle](https://icksw.tistory.com/189)
+ - 
 > ### Q : scene delegate에 대해 설명하시오.
  - A : [Multiple Window를 위한 Scenedelegate](https://icksw.tistory.com/137)
  - A : 간단하게 말하자면 iOS 13 업데이트로 인해 아이패드에서 multiple window를 지원하게 되면서 하나의 앱이 여러개의 window를 가질 수 있게 되었고 이들을 처리하기 위하여 기존의 방식인 window를 1개만 가질 수 있는 방식을 확장한 것 입니다. 이로 인해 UI LifeCycle의 책임을 Scene Delegate가 가지게 되었습니다.
 > ### Q : 앱이 In-Active 상태가 되는 시나리오를 설명하시오.
+ - A : [App LifeCycle](https://icksw.tistory.com/189)
+ - InActive, Active 상태를 Foreground 상태라고 합니다.
+ - 사용자가 앱을 실행 할 때 : `Not Running` → `In-Active` → `Active`
+ - 앱에서 앱 전환기 화면으로 이동할 때 (홈버튼 2번 누르거나, 홈버튼이 없는 기기의 경우 밑에서 위로 스와이프) : `Active` -> `In-Active` -> `Background`
+ - 앱을 다시 켤 때 : `Background` → `Active`
+ - 앱을 종료 할 때  : `Active` → `In-Active` → `background` → `suspend`
+ - 이러한 과정에서 Scene을 사용할 때오 Scene을 사용하지 않을 때의 차이점이 존재합니다.
 > ### Q : NSOperationQueue 와 GCD Queue 의 차이점을 설명하시오.
  - 개념 : [NSOperationQueue](https://icksw.tistory.com/35), [GCD Queue](https://icksw.tistory.com/70)
  - 사용법 : [NSOperatinnQueue](https://icksw.tistory.com/105), [GCD Queue](https://icksw.tistory.com/99)
