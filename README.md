@@ -13,7 +13,7 @@
 # [Disign Pattern](https://github.com/jaicoco/Swift_Design_Pattern_Study)
  - Swift로 구현해 보며 공부한 디자인 패턴
 
-# [RxSwift](https://github.com/RxSwift)
+# [RxSwift](https://github.com/jaicoco/RxSwift)
  - Raywenderlich의 Reactive Programming with Swift 책을 읽고 실습한 코드 및 정리한 내용
 
 # [iOS](https://github.com/jaicoco/iOS_Study/tree/master/iOS)
