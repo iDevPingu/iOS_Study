@@ -22,6 +22,8 @@
   - SwiftUI 공부 기록
  > ### [iOS_Developer_Interview](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_Developer_Interview)
   - iOS 개발자 인터뷰 질문 정리
+  - [iOS,Swift](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_Developer_Interview/iOS%20Developer)
+  - [CS](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_Developer_Interview/CS)
  > ### [iOS_Function_Practice](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_Funtion_Practice)
   - iOS 개발 기능들 연습 코드
  > ### [iOS_View_Practice](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_View_Practice)
