@@ -57,3 +57,6 @@
 [\[Swift\_Documents\] Swift 공식 문서 정리 - 26 - Access Control](https://icksw.tistory.com/118)
 
 [\[Swift\_Documents\] Swift 공식 문서 정리 - 27 - Advanced Operators](https://icksw.tistory.com/119)
+
+## Swift 5.5
+[\[Swift\_Documents\] Swift 공식 문서 정리 - 28 - Concurrency](https://icksw.tistory.com/262)
