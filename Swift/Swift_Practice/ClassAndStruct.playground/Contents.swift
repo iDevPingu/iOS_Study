@@ -74,3 +74,4 @@ print(CFGetRetainCount(classB)) // reference count = 2(기본값) -> 약한 참�
 classA = nil
 classB = nil // <- 더 이상 classA, classB의 데이터에 접근 할 수 없지만 deinit 실행되지 않았음 -> 메모리 누수 발생
 
+
