@@ -35,6 +35,10 @@ class RootViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     reset()
+    
+    AlertCenter.listenForAlerts { center in
+      self.alertContainer.isHidden = center.alertCount == 0
+    }
   }
 
   // resets the view to the didLoad state
