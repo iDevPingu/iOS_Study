@@ -29,7 +29,7 @@
 		0AEC71EC21D6EDCD00E836EB /* DataModel+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC71EB21D6EDCD00E836EB /* DataModel+Tests.swift */; };
 		0AEC71F021D6EE8A00E836EB /* AppModel+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC71EF21D6EE8A00E836EB /* AppModel+Tests.swift */; };
 		5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */; };
-		78C324B426F0F90B00AD92B7 /* ButtonObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C324B326F0F90B00AD92B7 /* ButtonObserver.swift */; };
+		78A1AB7E26F2614D001E1B56 /* Notification+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1AB7D26F2614D001E1B56 /* Notification+Tests.swift */; };
 		78C324B726F105BC00AD92B7 /* RootViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C324B626F105BC00AD92B7 /* RootViewControllerTests.swift */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
@@ -70,7 +70,7 @@
 		0AEC71EB21D6EDCD00E836EB /* DataModel+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataModel+Tests.swift"; sourceTree = "<group>"; };
 		0AEC71EF21D6EE8A00E836EB /* AppModel+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppModel+Tests.swift"; sourceTree = "<group>"; };
 		5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		78C324B326F0F90B00AD92B7 /* ButtonObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonObserver.swift; sourceTree = "<group>"; };
+		78A1AB7D26F2614D001E1B56 /* Notification+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Tests.swift"; sourceTree = "<group>"; };
 		78C324B626F105BC00AD92B7 /* RootViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerTests.swift; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* FitNess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitNess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				0A2EC8E121D41D030091A995 /* ViewControllers.swift */,
-				78C324B326F0F90B00AD92B7 /* ButtonObserver.swift */,
 			);
 			path = "Test Classes";
 			sourceTree = "<group>";
@@ -156,6 +155,7 @@
 		0A2EC8E321D41E150091A995 /* Test Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				78A1AB7C26F26137001E1B56 /* Alert */,
 				0AEC71ED21D6EDEE00E836EB /* App Layer */,
 				0AEC71EE21D6EDF700E836EB /* Data Model */,
 			);
@@ -241,6 +241,14 @@
 				0AEC71EF21D6EE8A00E836EB /* AppModel+Tests.swift */,
 			);
 			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		78A1AB7C26F26137001E1B56 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				78A1AB7D26F2614D001E1B56 /* Notification+Tests.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		78C324B526F1058900AD92B7 /* App Layer */ = {
@@ -395,9 +403,9 @@
 				0A80ED3F21CB2F93000B04E3 /* DataModelTests.swift in Sources */,
 				0A21C7E021C6CF1200169D8B /* AppModelTests.swift in Sources */,
 				0AEC71F021D6EE8A00E836EB /* AppModel+Tests.swift in Sources */,
+				78A1AB7E26F2614D001E1B56 /* Notification+Tests.swift in Sources */,
 				0AB709B9220CDFAE005C0AB0 /* AlertCenterTests.swift in Sources */,
 				0A2EC8E221D41D030091A995 /* ViewControllers.swift in Sources */,
-				78C324B426F0F90B00AD92B7 /* ButtonObserver.swift in Sources */,
 				78C324B726F105BC00AD92B7 /* RootViewControllerTests.swift in Sources */,
 				0A21C7E221C70AE400169D8B /* StepCountControllerTests.swift in Sources */,
 			);

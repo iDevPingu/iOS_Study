@@ -71,6 +71,12 @@ class StepCountControllerTests: XCTestCase {
     AppModel.instance.setToComplete()
   }
   
+  func expectTextChange() -> XCTestExpectation {
+    return keyValueObservingExpectation(
+      for: sut.startButton as Any,
+      keyPath: "titleLabel.text")
+  }
+  
   // MARK: - When
   fileprivate func whenStartStopPauseCalled() {
     sut.startStopPause(nil)
@@ -183,14 +189,13 @@ class StepCountControllerTests: XCTestCase {
   func testController_whenCaught_buttonLabelIsTryAgain() {
     // given
     givenInProgress()
-    let exp = expectation(description: "button title change")
-    let observer = ButtonObserver()
-    observer.observe(sut.startButton, expectation: exp)
+    let exp = expectTextChange()
+    
     // when
     whenCaught()
     
     // then
-    waitForExpectations(timeout: 1)
+    wait(for: [exp], timeout: 1)
     let text = sut.startButton.title(for: .normal)
     XCTAssertEqual(text, AppState.caught.nextStateButtonLabel)
   }
@@ -198,14 +203,13 @@ class StepCountControllerTests: XCTestCase {
   func testController_whenComplete_buttonLabelIsStartOver() {
     // given
     givenInProgress()
-    let exp = expectation(description: "button title change")
-    let observer = ButtonObserver()
-    observer.observe(sut.startButton, expectation: exp)
+    let exp = expectTextChange()
+    
     // when
     whenCompleted()
     
     // then
-    waitForExpectations(timeout: 1)
+    wait(for: [exp], timeout: 1)
     let text = sut.startButton.title(for: .normal)
     XCTAssertEqual(text, AppState.completed.nextStateButtonLabel)
   }

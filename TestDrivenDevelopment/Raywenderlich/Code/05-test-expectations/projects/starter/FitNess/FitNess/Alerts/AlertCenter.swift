@@ -48,14 +48,23 @@ class AlertCenter {
     
     alertQueue.append(alert)
     
+//    let notification = Notification(name: AlertNotification.name,
+//                                    object: self)
     let notification = Notification(name: AlertNotification.name,
-                                    object: self)
+                                    object: self,
+                                    userInfo: [AlertNotification.Keys.alert : alert])
     notificationCenter.post(notification)
   }
   
   // MARK: - Alert Handling
   func clearAlerts() {
     alertQueue.removeAll()
+  }
+  
+  func clear(alert: Alert) {
+    if let index = alertQueue.firstIndex(of: alert) {
+      alertQueue.remove(at: index)
+    }
   }
 }
 
