@@ -6,7 +6,7 @@
 
 - ## What's New In Swift
   - [Video](https://developer.apple.com/videos/play/wwdc2021/10192/)
-
+  - [My Note](https://icksw.tistory.com/265)
 
 - ## Meet async / await in Swift
   - [Video](https://developer.apple.com/videos/play/wwdc2021/10132/)
