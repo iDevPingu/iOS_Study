@@ -10,6 +10,7 @@
 
 - ## Meet async / await in Swift
   - [Video](https://developer.apple.com/videos/play/wwdc2021/10132/)
+  - [My Note](https://icksw.tistory.com/266)
 
 - ## Meet AsyncSequence
   - [Video](https://developer.apple.com/videos/play/wwdc2021/10058/)
