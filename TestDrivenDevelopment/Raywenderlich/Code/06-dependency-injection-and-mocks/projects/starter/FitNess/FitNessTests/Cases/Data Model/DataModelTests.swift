@@ -28,6 +28,7 @@
 
 import XCTest
 @testable import FitNess
+import CoreMotion
 
 class DataModelTests: XCTestCase {
 

@@ -43,12 +43,31 @@ class AppModel {
 
   var stateChangedCallback: ((AppModel) -> ())?
 
+  var pedometer: Pedometer
+  
+  init(pedometer: Pedometer = CMPedometer()) {
+    self.pedometer = pedometer
+  }
+  
   // MARK: - App Lifecycle
   func start() throws {
+    guard !pedometer.permissionDeclined else {
+      AlertCenter.instance.postAlert(alert: .notAuthorized)
+      return
+    }
+    
     guard dataModel.goal != nil else {
       throw AppError.goalNotSet
     }
+    
+    guard pedometer.pedometerAvailable else {
+      AlertCenter.instance.postAlert(alert: .noPedometer)
+      return
+    }
+    
     appState = .inProgress
+    
+    startPedometer()
   }
 
   func pause() {
@@ -74,5 +93,12 @@ class AppModel {
     }
 
     appState = .completed
+  }
+}
+
+// MARK: - Pedometer
+extension AppModel {
+  func startPedometer() {
+    pedometer.start()
   }
 }
