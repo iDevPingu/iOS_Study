@@ -37,6 +37,9 @@
 		786D35952704B69800CDA1D1 /* Pedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786D35942704B69800CDA1D1 /* Pedometer.swift */; };
 		786D35972704B72E00CDA1D1 /* CMPedometer+Pedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786D35962704B72E00CDA1D1 /* CMPedometer+Pedometer.swift */; };
 		786D359B2704B93800CDA1D1 /* MockPedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786D359A2704B93800CDA1D1 /* MockPedometer.swift */; };
+		7891DDE72705B4F100B2D402 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891DDE62705B4F100B2D402 /* MockData.swift */; };
+		7891DDEE2705C12B00B2D402 /* SimulatorPedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891DDEC2705BEF200B2D402 /* SimulatorPedometer.swift */; };
+		7891DDF02705C1FD00B2D402 /* ChaseViewPartialMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891DDEF2705C1FD00B2D402 /* ChaseViewPartialMock.swift */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +87,9 @@
 		786D35942704B69800CDA1D1 /* Pedometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedometer.swift; sourceTree = "<group>"; };
 		786D35962704B72E00CDA1D1 /* CMPedometer+Pedometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMPedometer+Pedometer.swift"; sourceTree = "<group>"; };
 		786D359A2704B93800CDA1D1 /* MockPedometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPedometer.swift; sourceTree = "<group>"; };
+		7891DDE62705B4F100B2D402 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		7891DDEC2705BEF200B2D402 /* SimulatorPedometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorPedometer.swift; sourceTree = "<group>"; };
+		7891DDEF2705C1FD00B2D402 /* ChaseViewPartialMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaseViewPartialMock.swift; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* FitNess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitNess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2A5F20F1F4A9144005CD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -287,6 +293,7 @@
 			children = (
 				786D35942704B69800CDA1D1 /* Pedometer.swift */,
 				786D35962704B72E00CDA1D1 /* CMPedometer+Pedometer.swift */,
+				7891DDEC2705BEF200B2D402 /* SimulatorPedometer.swift */,
 			);
 			path = Pedometer;
 			sourceTree = "<group>";
@@ -295,6 +302,8 @@
 			isa = PBXGroup;
 			children = (
 				786D359A2704B93800CDA1D1 /* MockPedometer.swift */,
+				7891DDE62705B4F100B2D402 /* MockData.swift */,
+				7891DDEF2705C1FD00B2D402 /* ChaseViewPartialMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -440,11 +449,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7891DDF02705C1FD00B2D402 /* ChaseViewPartialMock.swift in Sources */,
 				0A2EC8E521D41E240091A995 /* RootViewController+Tests.swift in Sources */,
 				0AEC71EC21D6EDCD00E836EB /* DataModel+Tests.swift in Sources */,
 				786D359B2704B93800CDA1D1 /* MockPedometer.swift in Sources */,
 				0ABD6B00220B9A0D0058B7E8 /* AlertViewControllerTests.swift in Sources */,
 				0A8299E922011775002AFFAF /* AlertCenterTests.swift in Sources */,
+				7891DDE72705B4F100B2D402 /* MockData.swift in Sources */,
 				0A80ED3F21CB2F93000B04E3 /* DataModelTests.swift in Sources */,
 				0ADA6ADF2228DA9D0058129C /* NessieTests.swift in Sources */,
 				0AD694D92209C89D00387553 /* Notification+Tests.swift in Sources */,
@@ -473,6 +484,7 @@
 				0A9EB50B21C072F00062B66E /* AppModel.swift in Sources */,
 				786D35972704B72E00CDA1D1 /* CMPedometer+Pedometer.swift in Sources */,
 				0A8299D821FE6D51002AFFAF /* Alert.swift in Sources */,
+				7891DDEE2705C12B00B2D402 /* SimulatorPedometer.swift in Sources */,
 				0A543C1D22122D3700E0819E /* Error+FitNess.swift in Sources */,
 				0A4E7CE82207E22A000C3B93 /* AlertViewController.swift in Sources */,
 				0A2EC8E721D47E5E0091A995 /* Nessie.swift in Sources */,

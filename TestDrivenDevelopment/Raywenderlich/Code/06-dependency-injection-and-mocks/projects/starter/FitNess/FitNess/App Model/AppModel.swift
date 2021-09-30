@@ -33,6 +33,14 @@ class AppModel {
 
   static let instance = AppModel()
 
+  static var pedometerFactory: (() -> Pedometer) = {
+    #if targetEnvironment(simulator)
+    return SimulatorPedometer()
+    #else
+    return CMPedometer()
+    #endif
+  }
+  
   let dataModel = DataModel()
 
   private(set) var appState: AppState = .notStarted {
@@ -45,7 +53,7 @@ class AppModel {
 
   var pedometer: Pedometer
   
-  init(pedometer: Pedometer = CMPedometer()) {
+  init(pedometer: Pedometer = pedometerFactory()) {
     self.pedometer = pedometer
   }
   
@@ -99,6 +107,21 @@ class AppModel {
 // MARK: - Pedometer
 extension AppModel {
   func startPedometer() {
-    pedometer.start()
+    pedometer.start(dataUpdates: handleData,
+                    eventUpdates: handleEvents)
+  }
+  
+  func handleData(data: PedometerData?, error: Error?) {
+    if let data = data {
+      dataModel.steps += data.steps
+      dataModel.distance += data.distanceTravelled
+    }
+  }
+  
+  func handleEvents(error: Error?) {
+    if let error = error {
+      let alert = error.is(CMErrorMotionActivityNotAuthorized) ? .notAuthorized : Alert(error.localizedDescription)
+      AlertCenter.instance.postAlert(alert: alert)
+    }
   }
 }

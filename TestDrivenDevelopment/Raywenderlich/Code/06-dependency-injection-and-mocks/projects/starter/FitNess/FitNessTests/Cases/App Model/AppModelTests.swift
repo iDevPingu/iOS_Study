@@ -263,4 +263,32 @@ class AppModelTests: XCTestCase {
     // then
     wait(for: [exp], timeout: 1)
   }
+  
+  func testAppModel_whenDeniedAuthAfterStart_generatesAlert() {
+    // given
+    givenGoalSet()
+    mockPedometer.error = MockPedometer.notAuthorizedError
+    let exp = expectation(forNotification: AlertNotification.name,
+                          object: nil,
+                          handler: alertHandler(.notAuthorized))
+    
+    // when
+    try! sut.start()
+    
+    // then
+    wait(for: [exp], timeout: 1)
+  }
+  
+  func testModel_whenPedometerUpdates_updatesDataModel() {
+    // given
+    givenInProgress()
+    let data = MockData(steps: 100, distanceTravelled: 10)
+    
+    // when
+    mockPedometer.sendData(data)
+    
+    // then
+    XCTAssertEqual(sut.dataModel.steps, 100)
+    XCTAssertEqual(sut.dataModel.distance, 10)
+  }
 }

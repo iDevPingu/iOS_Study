@@ -33,11 +33,16 @@ class StepCountControllerTests: XCTestCase {
 
   var sut: StepCountController!
 
+  var mockChaseView: ChaseViewPartialMock!
+  
   // MARK: - Test Lifecycle
   override func setUp() {
     super.setUp()
     let rootController = loadRootViewController()
     sut = rootController.stepController
+    
+    mockChaseView = ChaseViewPartialMock()
+    sut.chaseView = mockChaseView
   }
 
   override func tearDown() {
@@ -227,5 +232,18 @@ class StepCountControllerTests: XCTestCase {
     // then
     let chaseView = sut.chaseView
     XCTAssertEqual(chaseView?.state, AppState.inProgress)
+  }
+  
+  func testChaseView_whenDataSent_isUpdated() {
+    // given
+    givenInProgress()
+    
+    // when
+    let data = MockData(steps: 500, distanceTravelled: 10)
+    (AppModel.instance.pedometer as! MockPedometer).sendData(data)
+    
+    // then
+    XCTAssertTrue(mockChaseView.updateStateCalled)
+    XCTAssertEqual(mockChaseView.lastRunner, 0.5)
   }
 }

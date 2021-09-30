@@ -20,10 +20,24 @@ extension CMPedometer: Pedometer {
     return CMPedometer.authorizationStatus() == .denied
   }
   
-  
-  func start() {
+  func start(
+    dataUpdates: @escaping (PedometerData?, Error?) -> Void,
+    eventUpdates: @escaping (Error?) -> Void) {
     startEventUpdates { event, error in
-      // do nothing here for now
+      eventUpdates(error)
     }
+    startUpdates(from: Date()) { data, error in
+      dataUpdates(data, error)
+    }
+  }
+}
+
+extension CMPedometerData: PedometerData {
+  var steps: Int {
+    return numberOfSteps.intValue
+  }
+  
+  var distanceTravelled: Double {
+    return distance?.doubleValue ?? 0
   }
 }

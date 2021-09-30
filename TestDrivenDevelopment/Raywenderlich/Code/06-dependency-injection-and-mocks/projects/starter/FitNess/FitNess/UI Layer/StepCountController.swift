@@ -49,7 +49,7 @@ class StepCountController: UIViewController {
   @IBOutlet weak var stepCountLabel: UILabel!
   @IBOutlet var startButton: UIButton!
   @IBOutlet weak var chaseView: ChaseView!
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -59,6 +59,11 @@ class StepCountController: UIViewController {
       DispatchQueue.main.async {
         self.updateUI()
       }
+    }
+    
+    NotificationCenter.default.addObserver(forName: DataModel.UpdateNotification,
+                                           object: nil, queue: nil) { _ in
+      self.updateUI()
     }
   }
 
@@ -142,5 +147,9 @@ extension StepCountController {
 extension StepCountController {
   private func updateChaseView() {
     chaseView.state = AppModel.instance.appState
+    let dataModel = AppModel.instance.dataModel
+    let runner = Double(dataModel.steps) / Double(dataModel.goal ?? 10_000)
+    let nessie = dataModel.nessie.distance > 0 ? dataModel.distance / dataModel.nessie.distance : 0
+    chaseView.updateState(runner: runner, nessie: nessie)
   }
 }
