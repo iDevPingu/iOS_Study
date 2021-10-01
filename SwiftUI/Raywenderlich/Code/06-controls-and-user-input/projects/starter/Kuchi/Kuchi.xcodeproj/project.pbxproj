@@ -20,6 +20,15 @@
 		57A447F0252BD68200CF7A3E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A447EF252BD68200CF7A3E /* WelcomeView.swift */; };
 		57EF341324E89F92004ABEB2 /* KuchiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF340024E89F91004ABEB2 /* KuchiApp.swift */; };
 		57EF341424E89F92004ABEB2 /* KuchiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF340024E89F91004ABEB2 /* KuchiApp.swift */; };
+		785CCA3827073EC50016AB2F /* WelcomeBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785CCA3727073EC50016AB2F /* WelcomeBackgroundImage.swift */; };
+		785CCA3A27073F340016AB2F /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785CCA3927073F340016AB2F /* LogoImage.swift */; };
+		785CCA3C27073F7F0016AB2F /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785CCA3B27073F7F0016AB2F /* WelcomeMessageView.swift */; };
+		785CCA3F270740810016AB2F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785CCA3E270740810016AB2F /* RegisterView.swift */; };
+		785CCA41270744CC0016AB2F /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785CCA40270744CC0016AB2F /* BorderedViewModifier.swift */; };
+		785CCA43270747030016AB2F /* KeyboardFollower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785CCA42270747030016AB2F /* KeyboardFollower.swift */; };
+		785CCA4727074AD00016AB2F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785CCA4427074AD00016AB2F /* Profile.swift */; };
+		785CCA4827074AD00016AB2F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785CCA4527074AD00016AB2F /* Settings.swift */; };
+		785CCA4927074AD00016AB2F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785CCA4627074AD00016AB2F /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,12 +38,21 @@
 		57578FAC24E9D943003465A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		57578FAF24E9D943003465A4 /* jp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jp.json; sourceTree = "<group>"; };
 		57A447EF252BD68200CF7A3E /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		57EF340024E89F91004ABEB2 /* KuchiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuchiApp.swift; sourceTree = "<group>"; };
+		57EF340024E89F91004ABEB2 /* KuchiApp.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = KuchiApp.swift; sourceTree = "<group>"; tabWidth = 2; };
 		57EF340724E89F92004ABEB2 /* Kuchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57EF340A24E89F92004ABEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57EF340F24E89F92004ABEB2 /* Kuchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57EF341124E89F92004ABEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57EF341224E89F92004ABEB2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		785CCA3727073EC50016AB2F /* WelcomeBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackgroundImage.swift; sourceTree = "<group>"; };
+		785CCA3927073F340016AB2F /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
+		785CCA3B27073F7F0016AB2F /* WelcomeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageView.swift; sourceTree = "<group>"; };
+		785CCA3E270740810016AB2F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		785CCA40270744CC0016AB2F /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
+		785CCA42270747030016AB2F /* KeyboardFollower.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = KeyboardFollower.swift; sourceTree = "<group>"; tabWidth = 2; };
+		785CCA4427074AD00016AB2F /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		785CCA4527074AD00016AB2F /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		785CCA4627074AD00016AB2F /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,7 @@
 			children = (
 				57578F9224E9D943003465A4 /* Components */,
 				57A447EF252BD68200CF7A3E /* WelcomeView.swift */,
+				785CCA3E270740810016AB2F /* RegisterView.swift */,
 				57472F8B2533B85800F47C29 /* HorizontallyAlignedLabelStyle.swift */,
 			);
 			path = Welcome;
@@ -68,6 +87,10 @@
 		57578F9224E9D943003465A4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				785CCA3727073EC50016AB2F /* WelcomeBackgroundImage.swift */,
+				785CCA3927073F340016AB2F /* LogoImage.swift */,
+				785CCA3B27073F7F0016AB2F /* WelcomeMessageView.swift */,
+				785CCA40270744CC0016AB2F /* BorderedViewModifier.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -93,6 +116,9 @@
 		57B3CA462536553D00888D62 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				785CCA4427074AD00016AB2F /* Profile.swift */,
+				785CCA4527074AD00016AB2F /* Settings.swift */,
+				785CCA4627074AD00016AB2F /* UserManager.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -100,6 +126,7 @@
 		57B3CA58253655AF00888D62 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				785CCA42270747030016AB2F /* KeyboardFollower.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -254,10 +281,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				785CCA3A27073F340016AB2F /* LogoImage.swift in Sources */,
+				785CCA3827073EC50016AB2F /* WelcomeBackgroundImage.swift in Sources */,
 				57EF341324E89F92004ABEB2 /* KuchiApp.swift in Sources */,
+				785CCA4927074AD00016AB2F /* UserManager.swift in Sources */,
 				57472F8C2533B85800F47C29 /* HorizontallyAlignedLabelStyle.swift in Sources */,
+				785CCA43270747030016AB2F /* KeyboardFollower.swift in Sources */,
 				57A447F0252BD68200CF7A3E /* WelcomeView.swift in Sources */,
+				785CCA4827074AD00016AB2F /* Settings.swift in Sources */,
+				785CCA41270744CC0016AB2F /* BorderedViewModifier.swift in Sources */,
+				785CCA3F270740810016AB2F /* RegisterView.swift in Sources */,
+				785CCA4727074AD00016AB2F /* Profile.swift in Sources */,
 				57578FDE24E9D943003465A4 /* HomeView.swift in Sources */,
+				785CCA3C27073F7F0016AB2F /* WelcomeMessageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
