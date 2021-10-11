@@ -17,3 +17,7 @@
 
 - ## What's new in watchOS 8
   - [Video](https://developer.apple.com/videos/play/wwdc2021/10002/)
+
+- ## Meet Group Activities
+  - [Video](https://developer.apple.com/videos/play/wwdc2021/10183/)
+  - [My Note](https://icksw.tistory.com/267)
