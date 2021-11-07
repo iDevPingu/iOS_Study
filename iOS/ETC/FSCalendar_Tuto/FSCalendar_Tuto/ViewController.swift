@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  FSCalendar_Tuto
 //
-//  Created by Ick on 2020/10/14.
+//  Created by Pingu on 2020/10/14.
 //
 
 import UIKit
@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var calendar: FSCalendar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         self.calendarColor()
         self.calendarText()
         self.calendarEvent()
@@ -73,8 +73,6 @@ extension ViewController: FSCalendarDelegate {
 }
 
 extension ViewController: FSCalendarDataSource {
-//    func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
-//        <#code#>
-//    }
+
 }
 

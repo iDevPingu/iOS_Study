@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  FSCalendar_Tuto
 //
-//  Created by Ick on 2020/10/14.
+//  Created by Pingu on 2020/10/14.
 //
 
 import UIKit

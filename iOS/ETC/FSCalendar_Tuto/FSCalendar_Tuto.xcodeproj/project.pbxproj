@@ -40,7 +40,7 @@
 		0F888278DCFAAA10E8CD4493 /* Pods-FSCalendar_TutoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCalendar_TutoTests.release.xcconfig"; path = "Target Support Files/Pods-FSCalendar_TutoTests/Pods-FSCalendar_TutoTests.release.xcconfig"; sourceTree = "<group>"; };
 		48A48A4F1E900389166C9317 /* Pods-FSCalendar_Tuto-FSCalendar_TutoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCalendar_Tuto-FSCalendar_TutoUITests.debug.xcconfig"; path = "Target Support Files/Pods-FSCalendar_Tuto-FSCalendar_TutoUITests/Pods-FSCalendar_Tuto-FSCalendar_TutoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6071535D25372A4E000D3CA7 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		607277ED253711020015F981 /* FSCalendar_Tuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSCalendar_Tuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607277ED253711020015F981 /* FSCalendar_Tuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FSCalendar_Tuto.app; path = "/Users/pingu/Git/iOS_Study/iOS/ETC/FSCalendar_Tuto/build/Debug-iphoneos/FSCalendar_Tuto.app"; sourceTree = "<absolute>"; };
 		607277F0253711020015F981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607277F2253711020015F981 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		607277F4253711020015F981 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,8 +48,8 @@
 		607277F9253711030015F981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		607277FC253711030015F981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		607277FE253711030015F981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60727803253711030015F981 /* FSCalendar_TutoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSCalendar_TutoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6072780E253711030015F981 /* FSCalendar_TutoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSCalendar_TutoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60727803253711030015F981 /* FSCalendar_TutoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FSCalendar_TutoTests.xctest; path = "/Users/pingu/Git/iOS_Study/iOS/ETC/FSCalendar_Tuto/build/Debug-iphoneos/FSCalendar_TutoTests.xctest"; sourceTree = "<absolute>"; };
+		6072780E253711030015F981 /* FSCalendar_TutoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FSCalendar_TutoUITests.xctest; path = "/Users/pingu/Git/iOS_Study/iOS/ETC/FSCalendar_Tuto/build/Debug-iphoneos/FSCalendar_TutoUITests.xctest"; sourceTree = "<absolute>"; };
 		6779ED8F986B68B40D7DDBCD /* Pods-FSCalendar_Tuto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCalendar_Tuto.release.xcconfig"; path = "Target Support Files/Pods-FSCalendar_Tuto/Pods-FSCalendar_Tuto.release.xcconfig"; sourceTree = "<group>"; };
 		67BAF731466E7E8C2DC2D407 /* Pods-FSCalendar_Tuto-FSCalendar_TutoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCalendar_Tuto-FSCalendar_TutoUITests.release.xcconfig"; path = "Target Support Files/Pods-FSCalendar_Tuto-FSCalendar_TutoUITests/Pods-FSCalendar_Tuto-FSCalendar_TutoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D6BD837ABFA83CB51A45A68 /* Pods_FSCalendar_Tuto_FSCalendar_TutoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FSCalendar_Tuto_FSCalendar_TutoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,20 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				607277EF253711020015F981 /* FSCalendar_Tuto */,
-				607277EE253711020015F981 /* Products */,
 				D8FC0A902CC91D30CB5B4D8C /* Pods */,
 				94C04FA65C06FF3C5C168A9A /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		607277EE253711020015F981 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				607277ED253711020015F981 /* FSCalendar_Tuto.app */,
-				60727803253711030015F981 /* FSCalendar_TutoTests.xctest */,
-				6072780E253711030015F981 /* FSCalendar_TutoUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		607277EF253711020015F981 /* FSCalendar_Tuto */ = {
@@ -237,7 +226,7 @@
 				Base,
 			);
 			mainGroup = 607277E4253711020015F981;
-			productRefGroup = 607277EE253711020015F981 /* Products */;
+			productRefGroup = 607277E4253711020015F981;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
