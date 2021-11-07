@@ -1,0 +1,6 @@
+framework module Pods_FSCalendar_Tuto_FSCalendar_TutoUITests {
+  umbrella header "Pods-FSCalendar_Tuto-FSCalendar_TutoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'FSCalendar_Tuto' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for FSCalendar_Tuto
+  pod 'FSCalendar'
+
+  target 'FSCalendar_TutoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'FSCalendar_TutoUITests' do
+    # Pods for testing
+  end
+
+end
