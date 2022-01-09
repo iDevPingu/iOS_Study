@@ -1,46 +1,46 @@
 # PinguiOS
 ## 블로그 : https://icksw.tistory.com
 
-# [Algorithm](https://github.com/jaicoco/iOS_Study/tree/master/Algorithm)
+# [Algorithm](https://github.com/iDevPingu/iOS_Study/tree/master/Algorithm)
  - 알고리즘 문제 풀이 코드 입니다.
  
-# [Operating System](https://github.com/jaicoco/iOS_Study/tree/master/Operating_System)
+# [Operating System](https://github.com/iDevPingu/iOS_Study/tree/master/Operating_System)
  - 운영체제 공부한 내용 정리
 
-# [Coding Study](https://github.com/jaicoco/CodingStudy)
+# [Coding Study](https://github.com/iDevPingu/CodingStudy)
  - 코딩 스터디 Git
 
-# [Disign Pattern](https://github.com/jaicoco/Swift_Design_Pattern_Study)
+# [Disign Pattern](https://github.com/iDevPingu/Swift_Design_Pattern_Study)
  - Swift로 구현해 보며 공부한 디자인 패턴
 
-# [RxSwift](https://github.com/jaicoco/RxSwift)
+# [RxSwift](https://github.com/iDevPingu/RxSwift)
  - Raywenderlich의 Reactive Programming with Swift 책을 읽고 실습한 코드 및 정리한 내용
 
-# [SwiftUI](https://github.com/jaicoco/iOS_Study/tree/master/SwiftUI)
+# [SwiftUI](https://github.com/iDevPingu/iOS_Study/tree/master/SwiftUI)
  - SwiftUI를 공부한 내용 정리
 
-# [TDD](https://github.com/jaicoco/iOS_Study/tree/master/TestDrivenDevelopment)
+# [TDD](https://github.com/iDevPingu/iOS_Study/tree/master/TestDrivenDevelopment)
  - TDD를 공부한 내용 정리
 
-# [WWDC](https://github.com/jaicoco/iOS_Study/tree/master/WWDC)
+# [WWDC](https://github.com/iDevPingu/iOS_Study/tree/master/WWDC)
  - WWDC 시청 목록 및 내용 정리
 
-# [iOS](https://github.com/jaicoco/iOS_Study/tree/master/iOS)
- > ### [SwiftUI Git](https://github.com/jaicoco/Raywenderlich/tree/main/SwiftUI)
+# [iOS](https://github.com/iDevPingu/iOS_Study/tree/master/iOS)
+ > ### [SwiftUI Git](https://github.com/iDevPingu/Raywenderlich/tree/main/SwiftUI)
   - [SwiftUI Blog](https://icksw.tistory.com/category/iOS/SwiftUI)
   - SwiftUI 공부 기록
- > ### [iOS_Developer_Interview](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_Developer_Interview)
+ > ### [iOS_Developer_Interview](https://github.com//iOS_Study/tree/master/iOS/iOS_Developer_Interview)
   - iOS 개발자 인터뷰 질문 정리
-  - [iOS,Swift](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_Developer_Interview/iOS%20Developer)
-  - [CS](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_Developer_Interview/CS)
- > ### [iOS_Function_Practice](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_Funtion_Practice)
+  - [iOS,Swift](https://github.com/iDevPingu/iOS_Study/tree/master/iOS/iOS_Developer_Interview/iOS%20Developer)
+  - [CS](https://github.com/iDevPingu/iOS_Study/tree/master/iOS/iOS_Developer_Interview/CS)
+ > ### [iOS_Function_Practice](https://github.com/iDevPingu/iOS_Study/tree/master/iOS/iOS_Funtion_Practice)
   - iOS 개발 기능들 연습 코드
- > ### [iOS_View_Practice](https://github.com/jaicoco/iOS_Study/tree/master/iOS/iOS_View_Practice)
+ > ### [iOS_View_Practice](https://github.com/iDevPingu/iOS_Study/tree/master/iOS/iOS_View_Practice)
   - iOS 여러가지 뷰 연습 코드
   
-# [Swift](https://github.com/jaicoco/iOS_Study/tree/master/Swift)
+# [Swift](https://github.com/iDevPingu/iOS_Study/tree/master/Swift)
  - Apple Swift 공식문서를 읽고 정리한 내용
- > ### [Swift_Practice](https://github.com/jaicoco/iOS_Study/tree/master/Swift/Swift_Practice)
+ > ### [Swift_Practice](https://github.com/iDevPingu/iOS_Study/tree/master/Swift/Swift_Practice)
   - Swift를 연습한 코드
 
 # iOS Project
