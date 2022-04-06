@@ -85,3 +85,41 @@ for subscription in subscriptions {
 }
 
 
+class MySubscriber: Subscriber {
+    func receive(subscription: Subscription) {
+            
+    }
+    
+    func receive(_ input: Int) -> Subscribers.Demand {
+        return .unlimited
+    }
+    
+    func receive(completion: Subscribers.Completion<Never>) {
+        
+    }
+    
+    typealias Input = Int
+    typealias Failure = Never
+}
+
+class MySubscription: Subscription {
+    init() {
+        
+    }
+    
+    func request(_ demand: Subscribers.Demand) {
+        
+    }
+    
+    func cancel() {
+        
+    }
+}
+
+let mysubscriber1 = MySubscriber()
+let mysubscriber2 = MySubscriber()
+let mySubscription = MySubscription()
+mysubscriber1.receive(subscription: mySubscription)
+mysubscriber2.receive(subscription: mySubscription)
+
+
