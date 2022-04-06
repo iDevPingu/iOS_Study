@@ -60,12 +60,3 @@
   <div>
  <img width = "1000" src="https://user-images.githubusercontent.com/43135067/113486780-58a16980-94ef-11eb-9700-6d974e6a3fc3.png">
  </div>
- 
-
-# ChatBot
-> # 여행 친구를 찾아주는 챗봇 '여우'
- - https://github.com/saitros/Team-Lost-Star
-  - KakaoTalk에서 사용가능한 챗봇 구현
-  - Python3 사용
-
-# Test
