@@ -2,7 +2,7 @@ import Combine
 import Foundation
 
 func example(title: String, action: () -> Void) {
-    print("\(title) 예제 코드")
+    print("// \(title) 예제 코드")
     action()
     print("\n")
 }
