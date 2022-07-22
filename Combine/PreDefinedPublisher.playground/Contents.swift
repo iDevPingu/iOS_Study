@@ -16,26 +16,42 @@ var subscriptions = Set<AnyCancellable>()
 //    .store(in: &subscriptions)
 
 // Future
-//var emitValue: String = "내보내진 값"
-//var delay: TimeInterval = 3
-//
-//
-//let future = Future<String, Never> { promise in
-//    delay -= 1
-//    DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-//        promise(.success(emitValue))
-//    }
-//}
-//
-//future
-//    .sink(receiveCompletion: { print("첫번째 Subsrciber Completion: \($0)") },
-//          receiveValue: { print("첫번째 Subscriber value: \($0)") })
-//    .store(in: &subscriptions)
-//
-//future
-//    .sink(receiveCompletion: { print("두번째 Subscriber completion: \($0)") },
-//          receiveValue: { print("두번째 Subscriber value: \($0)") })
-//    .store(in: &subscriptions)
+var emitValue: Int = 0
+var delay: TimeInterval = 3
+
+func createFuture() -> Future<Int, Never> {
+    return Future<Int, Never> { promise in
+        delay -= 1
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            emitValue += 1
+            promise(.success(emitValue))
+        }
+    }
+}
+
+let firstFuture = createFuture()
+let secondFuture = createFuture()
+let thirdFuture = createFuture()
+
+firstFuture
+    .sink(receiveCompletion: { print("첫번째 Future Completion: \($0)") },
+          receiveValue: { print("첫번째 Future value: \($0)") })
+    .store(in: &subscriptions)
+
+secondFuture
+    .sink(receiveCompletion: { print("두번째 Future completion: \($0)") },
+          receiveValue: { print("두번째 Future value: \($0)") })
+    .store(in: &subscriptions)
+
+thirdFuture
+    .sink(receiveCompletion: { print("세번째 Future completion: \($0)") },
+          receiveValue: { print("세번째 Future value: \($0)") })
+    .store(in: &subscriptions)
+
+thirdFuture
+    .sink(receiveCompletion: { print("세번째 Future completion2: \($0)") },
+          receiveValue: { print("세번째 Future value2: \($0)") })
+    .store(in: &subscriptions)
 
 // Deferred
 
